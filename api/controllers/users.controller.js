@@ -1,6 +1,6 @@
 const User = require('../models/users.model');
 const mongoose = require('mongoose');
-const { v4: uuidv4 } = require("uuid");
+const jwt = require('jsonwebtoken');
 
 module.exports.register = (req, res, next) => {
     User.create(req.body) 
@@ -16,8 +16,6 @@ module.exports.register = (req, res, next) => {
     });
 };
 
-const sessions = [];
-
 module.exports.login = (req, res, next) => {
     User.findOne({ email: req.body.email })
         .then((user) => {
@@ -25,10 +23,15 @@ module.exports.login = (req, res, next) => {
                 user.checkPassword(req.body.password)
                     .then((match) => {
                         if (match) {
-                            const sessionId = uuidv4();
-                            sessions.push({ userId: user.id, sessionId });
-                            res.set("Set-Cookie", `sessionId=${sessionId}`);
-                            res.send();
+                            const accessToken = jwt.sign(
+                                {
+                                    sub: user.id,
+                                    exp: Date.now() / 1000 + 3600,
+                                },
+                                process.env.JWT_SECRET
+                            );
+
+                            res.json({ accessToken });
                         } else {
                             res.status(401).json({ message: "invalid password" });
                         }

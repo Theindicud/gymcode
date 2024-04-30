@@ -7,7 +7,7 @@ require('./configs/db.config');
 
 const app = express();
 
-app.use(logger('dev'));
+/*app.use(logger('dev'));
 
 //Routes
 const router = require("./configs/routes.config");
@@ -23,8 +23,8 @@ app.use((err, req, res, next) => {
     console.error(err);
     
     res.status(500).json({message:"Interval Server Error"});
-})
+})*/
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 app.listen(port, () => console.info(`Application running at port ${port}`));
