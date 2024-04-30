@@ -4,6 +4,9 @@ const Schema = mongoose.Schema;
 
 const bcrypt = require('bcrypt');
 
+const { PASSWORD_PATTERN, SALT_FACTOR, ADMINS } = require("../configs/constants.config");
+
+
 // FALTAN METER ATRIBUTOS DEL MODELO DE USUARIO
 
 const schema = new Schema(
@@ -12,21 +15,51 @@ const schema = new Schema(
             type: String,
             required: true,
         },
-        email: {
+        lastName: {
             type: String,
             required: true,
         },
+        photo: {
+            type: String,
+            default: 'https://asset.cloudinary.com/dznumjlzc/08ddc3023620c132c2f2927425c6b791',
+            validate:{
+                validator: function (image) {
+                    try {
+                        new URL (image)
+                        return true
+                      } catch (error) {
+                        return false
+                      }
+                  }
+            }
+        },
+        email: {
+            type: String,
+            lowercase: true,
+            unique: true,
+            trim: true,
+            required: 'Email is required',
+        },
         password: {
             type: String,
-            required: true,
+            required: 'Password is required',
+            trim: true,
+            match: [PASSWORD_PATTERN, 'Password needs at least 8 characters']
         },
         username: {
             type: String,
             required: true,
+            trim: true,
         },
         birthDate: {
             type: Date,
             required: true,
+        },
+        isCoach: {
+            type: Boolean
+        },
+        isAdmin: {
+            type: Boolean
         },
     },
     { 
@@ -44,9 +77,10 @@ const schema = new Schema(
 );
 
 schema.pre("save", function (next) {
+    this.isAdmin = ADMINS === this.email;
     if (this.isModified("password")) {
         bcrypt
-        .hash(this.password, 10)
+        .hash(this.password, SALT_FACTOR)
         .then((hash) => {
             this.password = hash;
             next();

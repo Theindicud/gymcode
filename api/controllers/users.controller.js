@@ -1,4 +1,4 @@
-const User = require('../models/user.model');
+const User = require('../models/users.model');
 const mongoose = require('mongoose');
 const { v4: uuidv4 } = require("uuid");
 
