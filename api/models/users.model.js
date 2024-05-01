@@ -7,8 +7,6 @@ const bcrypt = require('bcrypt');
 const { PASSWORD_PATTERN, SALT_FACTOR, ADMINS } = require("../configs/constants.config");
 
 
-// FALTAN METER ATRIBUTOS DEL MODELO DE USUARIO
-
 const schema = new Schema(
     {
         name: {
