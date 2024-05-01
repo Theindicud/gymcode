@@ -7,11 +7,16 @@ require('./configs/db.config');
 
 const app = express();
 
-/*app.use(logger('dev'));
+//Middlewares
+
+app.use(logger('dev'));
+app.use(express.json());
+
 
 //Routes
+
 const router = require("./configs/routes.config");
-app.use("/v1/api", router);
+app.use("/api/v1", router);
 
 //Error handlers
 
@@ -23,8 +28,8 @@ app.use((err, req, res, next) => {
     console.error(err);
     
     res.status(500).json({message:"Interval Server Error"});
-})*/
+})
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => console.info(`Application running at port ${port}`));

@@ -10,7 +10,7 @@ const multer = require('./multer.config')
 
 
 //user
-router.post("/users", users.register);
+router.post("/users", users.create);
 router.post("/login", users.login)
 
 module.exports = router;

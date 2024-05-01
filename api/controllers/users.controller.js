@@ -2,7 +2,7 @@ const User = require('../models/users.model');
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 
-module.exports.register = (req, res, next) => {
+module.exports.create = (req, res, next) => {
     User.create(req.body) 
     .then((user) => {
         res.json(user);
