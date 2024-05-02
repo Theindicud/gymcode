@@ -18,5 +18,6 @@ router.post("/login", users.login)
 //routines
 
 router.post("/routines", routines.create);
+router.get("/routines", routines.list);
 
 module.exports = router;

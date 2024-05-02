@@ -7,6 +7,8 @@ const bcrypt = require('bcrypt');
 const { PASSWORD_PATTERN, SALT_FACTOR, ADMINS } = require("../configs/constants.config");
 
 
+// FALTAN METER ATRIBUTOS DEL MODELO DE USUARIO
+
 const schema = new Schema(
     {
         name: {
@@ -55,8 +57,8 @@ const schema = new Schema(
         },
         role: {
             type: String,
-            enum: ["coach", "panza"],
-            default: "panza"
+            enum: ["coach", "pupil"],
+            default: "pupil"
         },
         isAdmin: {
             type: Boolean
