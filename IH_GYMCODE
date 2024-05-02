@@ -1,10 +1,9 @@
 {
 	"info": {
-		"_postman_id": "f4074268-2636-4545-ba11-bb69027583f9",
+		"_postman_id": "bf360bac-0c7e-4278-a03e-566993ccf83e",
 		"name": "GYMCODE_COLLECTION",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "34172422",
-		"_collection_link": "https://gymcode.postman.co/workspace/Gymcode-Workspace~adc1d18d-f68d-4cc1-8e33-e460cbc2ba77/collection/34172422-f4074268-2636-4545-ba11-bb69027583f9?action=share&source=collection_link&creator=34172422"
+		"_exporter_id": "34172401"
 	},
 	"item": [
 		{
@@ -77,12 +76,26 @@
 				},
 				{
 					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const jsonData = pm.response.json();\r",
+									"\r",
+									"pm.collectionVariables.set(\"TOKEN_BEARER\", `Bearer ${jsonData.accessToken}`);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\": \"john.doe@example.com\",\r\n    \"password\": \"mypassword\"\r\n}",
+							"raw": "{\r\n  \"email\": \"alice.smith@example.com\",\r\n  \"password\": \"strongPassword123\"\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -106,6 +119,100 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "routines",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "exercise",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{TOKEN_BEARER}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Sentadillas\",\r\n  \"description\": \"Ejercicio para fortalecer las piernas\",\r\n  \"bodyZone\": \"Piernas\",\r\n  \"owner\": \"6633dfea16e41ad43e4747c4\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/exercises",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"exercises"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "TOKEN_BEARER",
+			"value": "",
+			"type": "string"
 		}
 	]
 }
