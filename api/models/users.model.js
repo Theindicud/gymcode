@@ -55,8 +55,10 @@ const schema = new Schema(
             type: Date,
             required: true,
         },
-        isCoach: {
-            type: Boolean
+        role: {
+            type: String,
+            enum: ["coach", "panza"],
+            default: "panza"
         },
         isAdmin: {
             type: Boolean
