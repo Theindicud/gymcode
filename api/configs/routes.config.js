@@ -10,7 +10,8 @@ const auth =  require("../middlewares/auth.middleware");
 const multer = require('./multer.config')
 
 
-//user
+//Users
+
 router.post("/users", users.create);
 router.post("/login", users.login)
 
