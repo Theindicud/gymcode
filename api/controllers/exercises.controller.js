@@ -5,30 +5,35 @@ const User = require("../models/users.model");
 
 module.exports.create = (req, res, next) => {
     User.findById(req.user.id)
-    .then((user) => {
-        if (user) { 
-            return Exercise.create({
-                ...req.body,
-                owner: req.user.id
+        .then((user) => {
+            if (!user) {
+                return res.status(404).json({ message: "User not found" });
+            }
+            
+            const exercisesData = Array.isArray(req.body) ? req.body : [req.body];
 
-            })
-            .then((exercise) => {
-                res.json(exercise);
-            })
-           
-        } else {
-            res.status(404).json({ message: "User not found" })
+            const exercisesPromises = exercisesData.map((exerciseData) => {
+                return Exercise.create({
+                    ...exerciseData,
+                    owner: req.user.id
+                });
+            });
 
-        }
-    })
-    .catch((err) => {
-        if (err instanceof mongoose.Error.ValidationError) {
-            res.status(400).json(err.errors);
-        } else {
-            next(err);
-        }
-    });
-}
+            Promise.all(exercisesPromises)
+                .then((exercises) => {
+                    res.json(exercises);
+                })
+                .catch((err) => {
+                    if (err instanceof mongoose.Error.ValidationError) {
+                        res.status(400).json(err.errors);
+                    } else {
+                        next(err);
+                    }
+                });
+        })
+        .catch(next);
+};
+
 
 module.exports.list = (req, res, next) => {
     const { limit = 20, page = 0} = req.query;

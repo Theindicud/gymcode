@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Sentadillas",
+        "description": "Las sentadillas son un ejercicio compuesto que trabaja varios grupos musculares, incluyendo cuádriceps, glúteos, isquiotibiales y músculos de la espalda baja.",
+        "bodyZone": "Piernas",
+        "owner": "66351a19fc444f50fbcf698c"
+    },
+    {
+        "name": "Flexiones de Pecho",
+        "description": "Las flexiones de pecho son un ejercicio clásico para trabajar el pecho, los hombros y los tríceps.",
+        "bodyZone": "Pecho",
+        "owner": "66351a19fc444f50fbcf698c"
+    },
+    {
+        "name": "Dominadas",
+        "description": "Las dominadas son un ejercicio efectivo para trabajar los músculos de la espalda, los hombros y los brazos.",
+        "bodyZone": "Espalda alta",
+        "owner": "66351a19fc444f50fbcf698c"
+    },
+    {
+        "name": "Press de Hombros",
+        "description": "El press de hombros es un ejercicio que se enfoca en los músculos deltoides del hombro.",
+        "bodyZone": "Hombros",
+        "owner": "66351a19fc444f50fbcf698c"
+    },
+    {
+        "name": "Plancha",
+        "description": "La plancha es un ejercicio de fortalecimiento del core que trabaja los músculos abdominales, lumbares y del torso.",
+        "bodyZone": "Core",
+        "owner": "66351a19fc444f50fbcf698c"
+    },
+    {
+        "name": "Zancadas",
+        "description": "Las zancadas son un ejercicio que trabaja principalmente los músculos de las piernas, incluyendo cuádriceps, isquiotibiales y glúteos.",
+        "bodyZone": "Piernas",
+        "owner": "66351a19fc444f50fbcf698c"
+    },
+    {
+        "name": "Pull-Ups",
+        "description": "Pull-Ups are an effective exercise for working the muscles of the back, shoulders, and arms.",
+        "bodyZone": "Back",
+        "owner": "66351a19fc444f50fbcf698c"
+    },
+    {
+        "name": "Crunches",
+        "description": "Crunches are a core exercise that targets the abdominal muscles.",
+        "bodyZone": "Core",
+        "owner": "66351a19fc444f50fbcf698c"
+    },
+    {
+        "name": "Deadlifts",
+        "description": "Deadlifts are a compound exercise that targets the posterior chain, including the hamstrings, glutes, and lower back.",
+        "bodyZone": "Back",
+        "owner": "66351a19fc444f50fbcf698c"
+    },
+    {
+        "name": "Bicep Curls",
+        "description": "Bicep curls are an isolation exercise for the biceps.",
+        "bodyZone": "Arms",
+        "owner": "66351a19fc444f50fbcf698c"
+    }
+]
