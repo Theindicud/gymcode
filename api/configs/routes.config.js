@@ -17,8 +17,11 @@ router.post("/login", users.login)
 
 //ROUTINES CRUD
 
-router.post("/routines", routines.create);
+router.post("/routines", auth.checkAuth, routines.create);
 router.get("/routines", routines.list);
+router.delete("/routines/:id", routines.delete);
+router.patch("/routines/:id", routines.update);
+
 
 //EXERCISES CRUD
 

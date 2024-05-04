@@ -30,33 +30,33 @@
         "owner": "66351a19fc444f50fbcf698c"
     },
     {
-        "name": "Zancadas",
-        "description": "Las zancadas son un ejercicio que trabaja principalmente los músculos de las piernas, incluyendo cuádriceps, isquiotibiales y glúteos.",
+        "name": "Peso muerto",
+        "description": "El peso muerto es un ejercicio de levantamiento de pesas que se centra en el fortalecimiento de la espalda baja, los glúteos y los isquiotibiales.",
+        "bodyZone": "Espalda baja",
+        "owner": "66351a19fc444f50fbcf698c"
+    },
+    {
+        "name": "Burpees",
+        "description": "Los burpees son un ejercicio de cuerpo completo que involucra flexiones, saltos y sentadillas, proporcionando un gran ejercicio cardiovascular y de fuerza.",
+        "bodyZone": "Full body",
+        "owner": "66351a19fc444f50fbcf698c"
+    },
+    {
+        "name": "Elevación de talones",
+        "description": "La elevación de talones es un ejercicio que se enfoca en los músculos de la pantorrilla y ayuda a fortalecer y tonificar esta área.",
         "bodyZone": "Piernas",
         "owner": "66351a19fc444f50fbcf698c"
     },
     {
-        "name": "Pull-Ups",
-        "description": "Pull-Ups are an effective exercise for working the muscles of the back, shoulders, and arms.",
-        "bodyZone": "Back",
+        "name": "Flexiones de tríceps",
+        "description": "Las flexiones de tríceps son un ejercicio efectivo para fortalecer los músculos del tríceps en la parte posterior del brazo.",
+        "bodyZone": "Brazos",
         "owner": "66351a19fc444f50fbcf698c"
     },
     {
-        "name": "Crunches",
-        "description": "Crunches are a core exercise that targets the abdominal muscles.",
+        "name": "Abdominales cruzados",
+        "description": "Los abdominales cruzados son un ejercicio que se centra en los músculos oblicuos y ayuda a tonificar y fortalecer el área abdominal.",
         "bodyZone": "Core",
-        "owner": "66351a19fc444f50fbcf698c"
-    },
-    {
-        "name": "Deadlifts",
-        "description": "Deadlifts are a compound exercise that targets the posterior chain, including the hamstrings, glutes, and lower back.",
-        "bodyZone": "Back",
-        "owner": "66351a19fc444f50fbcf698c"
-    },
-    {
-        "name": "Bicep Curls",
-        "description": "Bicep curls are an isolation exercise for the biceps.",
-        "bodyZone": "Arms",
         "owner": "66351a19fc444f50fbcf698c"
     }
 ]

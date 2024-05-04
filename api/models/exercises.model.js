@@ -16,7 +16,7 @@ const exerciseSchema = new Schema(
         },
         bodyZone: {
             type: String,
-            enum: ['Core', 'Piernas', 'Glúteo', 'Espalda alta', 'Espalda baja', 'Full body', 'Brazos', 'Otros'],
+            enum: ['Core', 'Piernas', 'Glúteo', 'Espalda alta', 'Espalda baja', 'Full body', 'Brazos', 'Pecho', 'Hombros', 'Otros'],
             required: true
         },
         owner: {
