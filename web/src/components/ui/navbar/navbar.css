@@ -1,0 +1,20 @@
+.custom-navbar {
+    background-color: #3896b9;
+}
+
+.navbar-logo {
+    background-image: url('src/assets/img/navbar/gymcodeicon.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-top: 10px;
+    width: 200px;
+    height: 40px;
+    color: transparent;
+    text-shadow: none;
+}
+
+.offcanvas {
+    background-color: #3896b9;
+    color: white;
+}
