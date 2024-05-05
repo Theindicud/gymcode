@@ -32,12 +32,14 @@ module.exports.checkAuth = (req, res, next) => {
 
 };
 
-module.exports.isAdmin = (req, res, next) => {
-    if (req.user?.isAdmin) {
-        next();
-    } else {
-        next(createError(401));
+module.exports.checkRole = (role) => {
+    return (req, res, next) => {
+        const user = req.user;
+        if (user && user.role === role) {
+            next();
+        } else {
+            res.status(403).json({ message: 'Acceso prohibido'})
+        }
     }
 }
 
-module.exports

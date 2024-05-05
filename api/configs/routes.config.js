@@ -17,18 +17,18 @@ router.post("/login", users.login)
 
 //ROUTINES CRUD
 
-router.post("/routines", auth.checkAuth, routines.create);
-router.get("/routines", routines.list);
-router.delete("/routines/:id", routines.delete);
-router.patch("/routines/:id", routines.update);
+router.post("/routines", auth.checkAuth, auth.checkRole("admin", "coach"), routines.create);
+router.get("/routines", auth.checkAuth, routines.list);
+router.delete("/routines/:id", auth.checkAuth, auth.checkRole("admin", "coach"), routines.delete);
+router.patch("/routines/:id", auth.checkAuth, auth.checkRole("admin", "coach"), routines.update);
 
 
 //EXERCISES CRUD
 
-router.post("/exercises", auth.checkAuth, exercises.create);
+router.post("/exercises", auth.checkAuth, auth.checkAuth, auth.checkRole("admin", "coach"), exercises.create);
 router.get("/exercises", auth.checkAuth, exercises.list);
 router.get("/exercises/:id", auth.checkAuth, exercises.detail);
-router.patch("/exercises/:id", auth.checkAuth, auth.isAdmin, exercises.update);
-router.delete("/exercises/:id", auth.checkAuth, auth.isAdmin, exercises.delete);
+router.patch("/exercises/:id", auth.checkAuth, auth.checkAuth, auth.checkRole("admin", "coach"), exercises.update);
+router.delete("/exercises/:id", auth.checkAuth, auth.checkAuth, auth.checkRole("admin", "coach"), exercises.delete);
 
 module.exports = router;

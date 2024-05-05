@@ -6,8 +6,10 @@ const bcrypt = require('bcrypt');
 
 const { PASSWORD_PATTERN, SALT_FACTOR, ADMINS } = require("../configs/constants.config");
 
+const admins = (process.env.ADMINS || '').split(',')
+  .map((email) => email.trim());
 
-// FALTAN METER ATRIBUTOS DEL MODELO DE USUARIO
+
 
 const schema = new Schema(
     {
@@ -60,9 +62,6 @@ const schema = new Schema(
             enum: ["admin","coach", "pupil"],
             default: "pupil"
         },
-        isAdmin: {
-            type: Boolean
-        },
     },
     { 
         timestamps: true,
@@ -79,7 +78,10 @@ const schema = new Schema(
 );
 
 schema.pre("save", function (next) {
-    this.isAdmin = ADMINS === this.email;
+    if (admins.includes(this.email)) {
+        this.role = "admin";
+    }
+    
     if (this.isModified("password")) {
         bcrypt
         .hash(this.password, SALT_FACTOR)
