@@ -4,7 +4,7 @@ import './navbar.css'
 
 function Navbar() {
     return (
-        <nav className='navbar navbar-expand-lg custom-navbar fixed-top'>
+        <nav className='navbar navbar-expand-lg custom-navbar'>
             <div className='container-fluid'>
             <Link className='navbar-brand navbar-logo' to="/"/>
                 <button className='navbar-toggler' type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasNavbar' aria-controls='offcanvasNavbar'>
@@ -21,7 +21,7 @@ function Navbar() {
                                 <a className='nav-link active' aria-current='page' href='/'>Home</a>
                             </li>
                             <li className='nav-item'>
-                                <a className='nav-link' href='#'>Login</a>
+                                <a className='nav-link' href='/Register'>Registro</a>
                             </li>
                             <li className='nav-item'>
                                 <a className='nav-link' href='#'>Mis rutinas</a>

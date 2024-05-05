@@ -3,7 +3,7 @@ import './footer.css';
 
 function Footer() {
     return (
-        <section className="sticky-footer-wrapper">
+        <div className="sticky-footer-wrapper">
             <footer className="mt-auto py-1 bg-dark text-white">
                 <div className="container-fluid p-2 pb-0">
                     <section>
@@ -11,8 +11,8 @@ function Footer() {
                             <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                                 <h6 className="text-uppercase mb-4 font-weight-bold">GymCode</h6>
                                 <p>
-                                    ¡Experimenta tus entrenamientos favoritos con GymCode! Desde clases de fitness
-                                    y entrenamientos personalizados hasta nutrición y bienestar, ofrecemos una amplia gama de opciones.
+                                    ¡Experimenta tus entrenamientos favoritos con GymCode! 
+                                    Desde clases de fitness y entrenamientos personalizados hasta nutrición y bienestar, ofrecemos una amplia gama de opciones.
                                 </p>
                             </div>
                             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3"></div>
@@ -22,7 +22,7 @@ function Footer() {
                                     <a className="text-white" href="/us">Sobre nosotros</a>
                                 </p>
                                 <p>
-                                    <a className="text-white" href="/perfil">Tu cuenta</a>
+                                    <a className="text-white" href="/register">Registrate</a>
                                 </p>
                                 <p>
                                     <a className="text-white" href="/help">Ayuda</a>
@@ -48,7 +48,7 @@ function Footer() {
                     </section>
                 </div>
             </footer>
-        </section>
+        </div>
     );
 }
 
