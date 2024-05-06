@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card';
-import JoseRamon from '../../assets/img/photoscard/JoseRamon.jfif'; 
-import RaquelMelo from '../../assets/img/photoscard/RaquelMelo.jfif'; 
+import JoseRamon from "../../assets/img/photocard/JoseRamon.jfif";
+import RaquelMelo from "../../assets/img/photocard/RaquelMelo.jfif";
 
 export default function CardList() {
     return (

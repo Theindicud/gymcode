@@ -1,5 +1,5 @@
 import React from 'react';
-import Cards from '../../components/Cards/CardCEOs';
+import CardCEO from '../../components/Cards/CardCEO'
 import './aboutus.css';
 
 function AboutUs() {
@@ -8,7 +8,7 @@ function AboutUs() {
       <h1>Bienvenido a GymCode</h1>
       <div className='container'>
         <h2>¿Quienes somos?</h2>
-        <Cards />
+        <CardCEO/>
       </div>
     </div>
   );
