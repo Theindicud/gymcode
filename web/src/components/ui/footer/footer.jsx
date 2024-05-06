@@ -19,7 +19,7 @@ function Footer() {
                             <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
                                 <h6 className="text-uppercase mb-4 font-weight-bold">Enlaces útiles</h6>
                                 <p>
-                                    <a className="text-white" href="/us">Sobre nosotros</a>
+                                    <a className="text-white" href="/aboutus">Sobre nosotros</a>
                                 </p>
                                 <p>
                                     <a className="text-white" href="/register">Registrate</a>

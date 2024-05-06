@@ -1,8 +1,13 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useForm } from "react-hook-form";
-import { login } from "../services/api.service";
+import { login } from "../../services/api.service"
+import { useNavigate } from "react-router-dom";
+import { useAlert } from "../../contexts/alert.context";
 
 function Login() {
+    const navigate = useNavigate();
+    const { showAlert } = useAlert();
+
     const {
         register,
         handleSubmit,
@@ -14,10 +19,10 @@ function Login() {
 
     async function onSubmit(data) {
         try {
-            const response = await login(data);
-            setError(false)
+            await login(data);
+            navigate("/");
         } catch (err) {
-            setError(true)
+            showAlert("credenciales inválidas")
         }
     }
 

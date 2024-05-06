@@ -2,13 +2,15 @@ import { useState, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 
-import { createUser } from "../services/api.service";
+import { createUser } from "../../services/api.service"
+import { useAlert } from "../../contexts/alert.context";
 
 
 function Register() {
     const navigate = useNavigate();
     const latitude = useRef(0);
     const longitude = useRef(0);
+    const { showAlert } = useAlert();
 
     const {
         register,
@@ -41,7 +43,7 @@ function Register() {
 
             navigate("/login");
         } catch (err) {
-            setError(true);
+            showAlert("error. review form data")
         }
     }
 
