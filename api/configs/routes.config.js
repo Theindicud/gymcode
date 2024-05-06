@@ -13,12 +13,14 @@ const multer = require('./multer.config')
 //USERS
 
 router.post("/users", users.create);
-router.post("/login", users.login)
+router.post("/login", users.login);
+router.get("/profile", auth.checkAuth, users.profile);
 
 //ROUTINES CRUD
 
 router.post("/routines", auth.checkAuth, auth.checkRole("admin", "coach"), routines.create);
-router.get("/routines", auth.checkAuth, routines.list);
+router.get("/routines", routines.list);
+router.get("/routines/:id", auth.checkAuth, routines.detail);
 router.delete("/routines/:id", auth.checkAuth, auth.checkRole("admin", "coach"), routines.delete);
 router.patch("/routines/:id", auth.checkAuth, auth.checkRole("admin", "coach"), routines.update);
 
@@ -26,8 +28,8 @@ router.patch("/routines/:id", auth.checkAuth, auth.checkRole("admin", "coach"), 
 //EXERCISES CRUD
 
 router.post("/exercises", auth.checkAuth, auth.checkAuth, auth.checkRole("admin", "coach"), exercises.create);
-router.get("/exercises", auth.checkAuth, exercises.list);
-router.get("/exercises/:id", auth.checkAuth, exercises.detail);
+router.get("/exercises", exercises.list);
+router.get("/exercises/:id", exercises.detail);
 router.patch("/exercises/:id", auth.checkAuth, auth.checkAuth, auth.checkRole("admin", "coach"), exercises.update);
 router.delete("/exercises/:id", auth.checkAuth, auth.checkAuth, auth.checkRole("admin", "coach"), exercises.delete);
 

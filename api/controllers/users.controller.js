@@ -44,3 +44,7 @@ module.exports.login = (req, res, next) => {
         .catch(next);
 };
 
+module.exports.profile = (req, res) => {
+    res.json(req.usern)
+}
+

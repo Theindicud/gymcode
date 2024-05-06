@@ -61,6 +61,18 @@ module.exports.update = (req, res, next) => {
       });
 }
 
+module.exports.detail = (req, res, next) => {
+    Routine.findById(req.params.id)
+      .then((routine) => {
+        if (routine) {
+            res.json(routine)
+        } else {
+            res.status(404).json({ message: "Rutina no encontrada"})
+        }
+      })
+      .catch(next)
+}
+
 module.exports.delete = (req, res, next) => {
     Routine.findByIdAndDelete(req.params.id)
         .then((routine) => {
