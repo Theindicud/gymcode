@@ -1,18 +1,14 @@
-import { useEffect, useState } from "react";
-import { getRoutines } from "../services/api.service";
+import RoutinesList from "../components/routines/routines-list/routines-list";
 
 function Home() {
-    const [routines, setRoutines] = useState(null);
 
-    useEffect(() => {
-        getRoutines().then((response) => {
-            setRoutines(response.data)
-        });
-    }, []);
+    return (
+        <>
+            <h2>Nuestras mejores rutinas</h2>
+            <RoutinesList/>
 
-    if (!routines) {
-        return <div>Cargando...</div>;
-    }
+        </>
+    )
 
 
 }

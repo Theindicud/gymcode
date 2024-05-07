@@ -1,10 +1,14 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
-import "./navbar.css";
+import { Link, NavLink } from "react-router-dom";
 import AuthContext from "../../../contexts/auth.context"
 
+import "./navbar.css";
+
+const renderNavLinkActive = ({ isActive }) => isActive ? 'nav-link active' : 'nav-link'
+
+
 function Navbar() {
-  const context = useContext(AuthContext);
+  const { user, doLogout} = useContext(AuthContext);
 
   return (
     <nav className="navbar navbar-expand-lg custom-navbar">
@@ -40,11 +44,11 @@ function Navbar() {
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="/">
-                  Home
+                <i className="fa fa-home" aria-hidden="true" style={{ fontSize: '20px' }} ></i>
                 </a>
               </li>
               <li className="nav-item">
-                {context.user ? (
+                {user ? (
                   <a className="nav-link" href="/profile">
                     Perfil - {user.name}
                   </a>
@@ -54,11 +58,13 @@ function Navbar() {
                   </a>
                 )}
               </li>
+              
               <li className="nav-item">
                 <a className="nav-link" href="/Register">
                   Registro
                 </a>
               </li>
+              
               <li className="nav-item">
                 <a className="nav-link" href="#">
                   Mis rutinas
@@ -69,16 +75,8 @@ function Navbar() {
                   Coach
                 </a>
               </li>
-              <li className="nav-item">
-                {context.user && (
-                  <a
-                    onClick={context.doLogout}
-                    className="btn btn-sm btn-danger"
-                  >
-                    Cerrar sesión
-                  </a>
-                )}
-              </li>
+              {user && (
+
               <li className="nav-item dropdown">
                 <a
                   className="nav-link dropdown-toggle"
@@ -104,8 +102,18 @@ function Navbar() {
                       Ayuda
                     </a>
                   </li>
+                   <li className="nav-item">
+                  <a
+                    onClick={doLogout}
+                    className="btn btn-sm btn-danger"
+                  >
+                    Cerrar sesión
+                  </a>
+              </li>
                 </ul>
               </li>
+              )}
+
             </ul>
           </div>
         </div>

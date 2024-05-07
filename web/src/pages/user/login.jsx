@@ -1,37 +1,32 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { login } from "../../services/api.service"
 import { useNavigate } from "react-router-dom";
 import { useAlert } from "../../contexts/alert.context";
+import AuthContext from "../../contexts/auth.context";
 
 function Login() {
     const navigate = useNavigate();
     const { showAlert } = useAlert();
+    const { doLogin } = useContext(AuthContext);
 
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm();
-
-    const [error, setError] = useState();
-    
+  
 
     async function onSubmit(data) {
         try {
-            await login(data);
+            await doLogin(data);
             navigate("/");
         } catch (err) {
-            showAlert("credenciales inválidas")
+            showAlert("Credenciales inválidas")
         }
     }
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            {error && (
-                <div className="alert alert-danger">error. Review form data</div>
-            )}
-
             <div className="mb-3">
                 <label htmlFor="email" className="form-label">
                     Correo electrónico

@@ -43,6 +43,10 @@ export function getRoutines(params) {
     return http.get("/routines", { params });
 }
 
+export function getRoutine(id) {
+    return http.get(`/routines/${id}`);
+}
+
 export function logout() {
     localStorage.removeItem("token");
 }
