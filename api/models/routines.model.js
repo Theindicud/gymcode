@@ -31,7 +31,7 @@ const routineSchema = new Schema({
             {
                 exercise: {
                     type: Schema.Types.ObjectId,
-                    ref: 'Exercise'
+                    ref: 'Ennpxercise'
                 },
                 equipment: {
                     type: [{

@@ -45,6 +45,6 @@ module.exports.login = (req, res, next) => {
 };
 
 module.exports.profile = (req, res) => {
-    res.json(req.usern)
+    res.json(req.user)
 }
 
