@@ -5,7 +5,7 @@ const http = axios.create({
 });
 
 http.interceptors.request.use(function (config) {
-    config.headers.authorization = localStorage.getItem("token");
+    config.headers.authorization = `BEARER ${localStorage.getItem("token")}`;
     return config;
 });
 
@@ -14,10 +14,7 @@ http.interceptors.response.use(
         return response;
     },
     function (error) {
-        if (error.response.status === 401 &&
-            location.pathname !== "/login" && 
-            location.pathname !== "/register"
-            ) {
+        if (error.response.status === 401 && location.pathname !== "/login" && location.pathname !== "/register") {
             localStorage.removeItem("token");
             window.location.replace("/login");
         }
@@ -42,8 +39,8 @@ export function getProfile() {
     return http.get("/profile");
 }
 
-export function getRoutines() {
-    return http.get("/routines");
+export function getRoutines(params) {
+    return http.get("/routines", { params });
 }
 
 export function logout() {

@@ -21,7 +21,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             <Route path="/aboutus" element={<AboutUs />} />
-            <Route path="/routines/:id" element={<Routine />} />
+            <Route path="/routines" element={<Routine />} />
           </Routes>
         </AlertProvider>
       </main>
