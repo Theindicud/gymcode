@@ -12,7 +12,7 @@ const routineSchema = new Schema({
         type: String,
         required: true,
         trim: true,
-        maxLength: 100
+        maxLength: 300
     },
     difficulty: {
         type: String,

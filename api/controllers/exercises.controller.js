@@ -32,9 +32,11 @@ module.exports.create = (req, res, next) => {
 
 
 module.exports.list = (req, res, next) => {
-    const { limit = 20, page = 0} = req.query;
-
-   Exercise.find()
+    const {description, bodyZone, limit = 10, page = 0} = req.query;
+    const criteria = {};
+    if (description) criteria.description = description;
+    if (bodyZone) criteria.bodyZone = bodyZone;
+   Exercise.find(criteria)
     .sort({_id: -1})
     .skip(page * limit)
     .limit(limit)

@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Rutina de Fuerza 1",
+        "description": "Una rutina de fuerza que incluye una variedad de ejercicios para fortalecer diferentes grupos musculares.",
+        "difficulty": "Intermedio",
+        "routineType": "Fuerza",
+        "exercises": [
+            {
+                "exercise": "663bae589f13ea8a61684ff1",
+                "equipment": [
+                    "Ninguno"
+                ],
+                "series": 4,
+                "repetitions": 8,
+                "weight": 0
+            },
+            {
+                "exercise": "663bae589f13ea8a61684ff6",
+                "equipment": [
+                    "Barra"
+                ],
+                "series": 3,
+                "repetitions": 6,
+                "weight": 0
+            },
+            {
+                "exercise": "66351a19fc444f50fbcf698c",
+                "equipment": [
+                    "Mancuerna"
+                ],
+                "series": 3,
+                "repetitions": 10,
+                "weight": 0
+            }
+        ],
+        "equipmentNecessary": false,
+        "owner": "663a71331a108542f5f49c87"
+    },
+
+{
+        "name": "Rutina de Core",
+        "description": "Una rutina intensa que combina ejercicios de cardio y fuerza para todo el cuerpo.",
+        "difficulty": "Intermedio",
+        "routineType": "Fuerza",
+        "exercises": [
+            {
+                "exercise": "6635e96045a5b9f2dd4226c2",
+                "equipment": [
+                    "Mancuerna"
+                ],
+                "series": 4,
+                "repetitions": 12
+            }
+        ],
+        "equipmentNecessary": false,
+        "owner": "66351a19fc444f50fbcf698c"
+    }
+]
