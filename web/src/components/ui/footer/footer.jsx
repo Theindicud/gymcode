@@ -3,7 +3,7 @@ import './footer.css';
 
 function Footer() {
     return (
-        <div className="sticky-footer-wrapper">
+        <div className="sticky-footer-wrapper footer-expand-lg fixed-bottom">
             <footer className="mt-auto py-1 bg-dark text-white">
                 <div className="container-fluid p-2 pb-0">
                     <section>
@@ -30,8 +30,8 @@ function Footer() {
                             </div>
                             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                                 <h6 className="text-uppercase mb-4 font-weight-bold">Contacto</h6>
-                                <p><i className="fas fa-envelope mr-3"></i> info@gymcode.com</p>
-                                <p><i className="fas fa-phone mr-3"></i> +34 123 456 789</p>
+                                <p><i class="fa fa-info" aria-hidden="true"></i> info@gymcode.com</p>
+                                <p><i class="fa fa-phone" aria-hidden="true"></i>+34 123 456 789</p>
                             </div>
                         </div>
                     </section>

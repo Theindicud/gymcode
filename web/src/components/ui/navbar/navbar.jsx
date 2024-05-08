@@ -8,7 +8,7 @@ const renderNavLinkActive = ({ isActive }) => isActive ? 'nav-link active' : 'na
 
 
 function Navbar() {
-  const { user, doLogout} = useContext(AuthContext);
+  const { user, doLogout } = useContext(AuthContext);
 
   return (
     <nav className="navbar navbar-expand-lg custom-navbar">
@@ -44,7 +44,7 @@ function Navbar() {
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="/">
-                <i className="fa fa-home" aria-hidden="true" style={{ fontSize: '20px' }} ></i>
+                  <i className="fa fa-home" aria-hidden="true"></i>
                 </a>
               </li>
               <li className="nav-item">
@@ -56,62 +56,79 @@ function Navbar() {
                   <a className="nav-link" href="/login">
                     Iniciar sesión
                   </a>
+
                 )}
               </li>
-              
+
+
               <li className="nav-item">
-                <a className="nav-link" href="/Register">
-                  Registro
-                </a>
+                {user ? (
+                    null
+                ) : (
+                  <a className="nav-link" href="/Register">
+                  Registrate
+                  </a>
+                )}
               </li>
-              
+
+
               <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Mis rutinas
-                </a>
+                {user ? (
+                  <a className="nav-link" href="#">
+                    Mis rutinas
+                  </a>
+                ) : (
+                  <a className="nav-link" href="routines">
+                    Rutinas
+                  </a>
+                )}
               </li>
+
+
+
               <li className="nav-item">
                 <a className="nav-link" href="#">
                   Coach
                 </a>
               </li>
+
               {user && (
 
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  id="offcanvasNavbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Configuración
-                </a>
-                <ul
-                  className="dropdown-menu"
-                  aria-labelledby="offcanvasNavbarDropdown"
-                >
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Editar perfil
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Ayuda
-                    </a>
-                  </li>
-                   <li className="nav-item">
+                <li className="nav-item dropdown">
                   <a
-                    onClick={doLogout}
-                    className="btn btn-sm btn-danger"
+                    className="nav-link dropdown-toggle"
+                    href="#"
+                    id="offcanvasNavbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
                   >
-                    Cerrar sesión
+                    Configuración <i class="fa fa-cog" aria-hidden="true"></i>
                   </a>
-              </li>
-                </ul>
-              </li>
+                  <ul
+                    className="dropdown-menu"
+                    aria-labelledby="offcanvasNavbarDropdown"
+                  >
+                    <li>
+                      <a className="dropdown-item" href="#">
+                        Perfil
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="#">
+                        Ayuda
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <a
+                        onClick={doLogout}
+                        className="btn btn-sm btn-danger"
+                      >
+                        Cerrar sesión
+                      </a>
+                    </li>
+                  </ul>
+                </li>
               )}
 
             </ul>

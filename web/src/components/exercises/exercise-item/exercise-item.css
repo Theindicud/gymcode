@@ -1,0 +1,32 @@
+/* exercise-item.css */
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.card-body {
+    font-family: Arial, sans-serif;
+}
+
+.card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.card-text {
+    font-size: 1em;
+}
+
+.fa {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+}
+
+.fa-hand-o-right {
+    color: #007bff;
+}

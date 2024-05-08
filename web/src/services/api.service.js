@@ -47,6 +47,14 @@ export function getRoutine(id) {
     return http.get(`/routines/${id}`);
 }
 
+export function getExercises(params) {
+    return http.get("/exercises", { params })
+}
+
+export function getExercise(id) {
+    return http.get(`/exercises/${id}`);
+}
+
 export function logout() {
     localStorage.removeItem("token");
 }

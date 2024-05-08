@@ -1,5 +1,10 @@
 .custom-navbar {
     background-color: #3896b9;
+   
+}
+
+.navbar {
+    --bs-navbar-color: #fff;
 }
 
 .navbar-logo {
@@ -18,3 +23,11 @@
     background-color: #3896b9;
     color: white;
 }
+
+.nav-link i {
+    vertical-align: middle; 
+    height: 20px; 
+    font-size: 20px;
+    color:#fff;
+  }
+  

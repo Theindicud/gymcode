@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useAlert } from "../../contexts/alert.context";
 import AuthContext from "../../contexts/auth.context";
+import './login.css';
+
 
 function Login() {
     const navigate = useNavigate();
@@ -26,10 +28,11 @@ function Login() {
     }
 
     return (
+        <div className="login-container">
         <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mb-3">
                 <label htmlFor="email" className="form-label">
-                    Correo electrónico
+                <i class="fa fa-envelope" aria-hidden="true"></i> Correo electrónico 
                 </label>
                 <input 
                   required
@@ -42,7 +45,7 @@ function Login() {
 
             <div className="mb-3">
                 <label htmlFor="password" className="form-label">
-                    Contraseña
+                <i class="fa fa-key" aria-hidden="true"></i>  Contraseña 
                 </label>
                 <input 
                   required
@@ -57,6 +60,7 @@ function Login() {
                 Login
             </button>
         </form>
+        </div>
     );
 }
 
