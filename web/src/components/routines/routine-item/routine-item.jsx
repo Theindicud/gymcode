@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 function RoutineItem({ routine }) {
   return (
@@ -9,6 +9,7 @@ function RoutineItem({ routine }) {
           <i className="fa fa-exclamation me-2"></i>
           {routine.difficulty}
         </p>
+        <Link to={`/routines/${routine.id}`} className="stretched-link"/>
       </div>
     </div>
   );

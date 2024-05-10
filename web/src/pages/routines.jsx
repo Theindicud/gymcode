@@ -1,9 +1,17 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import RoutinesList from '../components/routines/routines-list/routines-list';
 
-function Routine() {
+function Routines() {
     const params = useParams();
 
-    return <div>Rutinas {params.id}</div>
+    return (
+        <div className="container-routines">
+            <h1>Rutinas {params.id}</h1>
+            <RoutinesList limit={3} />
+            <Link to={`/routines/${routine.id}`} className="stretched-link"/>
+        </div>
+
+    )
 }
 
-export default Routine;
+export default Routines;

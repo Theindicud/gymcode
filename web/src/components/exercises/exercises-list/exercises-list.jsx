@@ -16,8 +16,8 @@ function ExercisesList({ description, bodyZone, limit, page }) {
                 if (limit) query.limit = limit;
                 if (page) query.page = page;
 
-                const response = await getExercises(query);
-                setExercises(response.data);
+                const { data: exercises } = await getExercises(query);
+                setExercises(exercises);
             } catch (error) {
                 console.error(error)
             }

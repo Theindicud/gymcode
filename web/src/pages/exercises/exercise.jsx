@@ -36,7 +36,8 @@ function Exercise() {
     }, [id, navigate]);
 
     if (loading) {
-        return <div>Cargando...</div>;
+        return <div> <i class="fa fa-spinner" aria-hidden="true"></i>
+        Cargando...</div>;
     }
 
     if (error) {
@@ -50,7 +51,7 @@ function Exercise() {
     return (
         <div className='exercise-container'>
             <h3>{exercise.name}</h3>
-            <p className="mb-1"> <i class="fa fa-circle" aria-hidden="true"></i>{exercise.description}</p>
+            <p className="mb-1"> <i class="fa fa-circle" aria-hidden="true"></i>n{exercise.description}</p>
         </div>
     );
 }

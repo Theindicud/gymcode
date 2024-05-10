@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { getRoutines } from "../../../services/api.service";
 import RoutineItem from "../routine-item/routine-item";
-import { get } from "react-hook-form";
 
 function RoutinesList({ routineType, difficulty, equipmentNecessary, limit, page }) {
     const [routines, setRoutines] = useState([]);

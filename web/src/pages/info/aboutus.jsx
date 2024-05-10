@@ -5,7 +5,7 @@ import './aboutus.css';
 function AboutUs() {
   return (
     <div>
-      <h1>Bienvenido a GymCode</h1>
+      <h1 className='aboutustitle'>Bienvenido a GymCode</h1>
       <div className='container'>
         <h2>¿Quienes somos?</h2>
         <CardCEO/>
