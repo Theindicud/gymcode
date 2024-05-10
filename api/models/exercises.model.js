@@ -23,9 +23,20 @@ const exerciseSchema = new Schema(
             type: Schema.Types.ObjectId,
             ref: 'User',
             required: true
+        }
+    },
+    {
+        timestamps: true,
+        toJSON: {
+            transform: (doc, ret) => {
+                ret.id = ret._id;
+                delete ret._id;
+                delete ret.__v;
+                delete ret.password;
+                return ret;
+            },
         },
-        
-    }
+    },
 );
 
 const Exercise = mongoose.model('Exercise', exerciseSchema);
