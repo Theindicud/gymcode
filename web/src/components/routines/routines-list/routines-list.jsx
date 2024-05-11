@@ -32,7 +32,7 @@ function RoutinesList({ routineType, difficulty, equipmentNecessary, limit, page
         <div className="row row-columns-3">
 
             {routines.map((routine) => (
-                <Link key={routine.id} to={`/routines/${routine.id}`} className="col">
+                <Link to={`/routines/${routine.id}`} className="col">
                     <RoutineItem routine={routine} />
                 </Link>
             ))}

@@ -1,4 +1,4 @@
-function RoutineDetail({ name, description, difficulty, routineType, exercises, equipmentNecessary, owner }) {
+function RoutineDetail({ name, description, difficulty, routineType, exercises, owner }) {
 
     return (
         <section>
@@ -10,14 +10,14 @@ function RoutineDetail({ name, description, difficulty, routineType, exercises, 
                 <p>{routineType}</p>
                 <p>{owner.name}</p>
 
-
-                {exercises.map(exercise => 
+                {exercises.map(e => 
                     (<div>
-                        <h4>{exercises.name}</h4>
-                        <section>{exercise.equipment.map(equipment => <div className="rounded-pill bg-black text-white text-center">{equipment}</div>)}</section>
-                        <p>{exercise.series}</p>
-                        <p>{exercise.repetitions}</p>
-                        <p>{exercise.weight}</p>
+                        <p>{e.exercise.name}</p>
+                        <section>{e.equipment.map(equipment => <div className="rounded-pill bg-black text-white text-center">{equipment}</div>)}</section>
+
+                        <p>{e.series}</p>
+                        <p>{e.repetitions}</p>
+                        <p>{e.weight}</p>
                     
                     </div>)
                 )}

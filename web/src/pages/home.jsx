@@ -7,9 +7,7 @@ function Home() {
         <>
             <h2>Nuestras mejores rutinas</h2>
             <RoutinesList limit={4}/>
-           {/*<Link to={`/routines/${routine.id}`} className="stretched-link"/>
-            */}
-
+           
         </>
     )
 
