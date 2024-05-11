@@ -6,7 +6,7 @@
         "routineType": "Fuerza",
         "exercises": [
             {
-                "exercise": "663bae589f13ea8a61684ff1",
+                "exercise": "663f66fd048ae800a2fa9b65",
                 "equipment": [
                     "Ninguno"
                 ],
@@ -15,7 +15,7 @@
                 "weight": 0
             },
             {
-                "exercise": "663bae589f13ea8a61684ff6",
+                "exercise": "663f66fd048ae800a2fa9b66",
                 "equipment": [
                     "Barra"
                 ],
@@ -24,7 +24,7 @@
                 "weight": 0
             },
             {
-                "exercise": "66351a19fc444f50fbcf698c",
+                "exercise": "663f66fd048ae800a2fa9b6d",
                 "equipment": [
                     "Mancuerna"
                 ],
@@ -34,7 +34,7 @@
             }
         ],
         "equipmentNecessary": false,
-        "owner": "663a71331a108542f5f49c87"
+        "owner": "663f5c60041a9039b481109d"
     },
 
 {
@@ -44,7 +44,7 @@
         "routineType": "Fuerza",
         "exercises": [
             {
-                "exercise": "6635e96045a5b9f2dd4226c2",
+                "exercise": "663f66fd048ae800a2fa9b69",
                 "equipment": [
                     "Mancuerna"
                 ],
@@ -53,6 +53,6 @@
             }
         ],
         "equipmentNecessary": false,
-        "owner": "66351a19fc444f50fbcf698c"
+        "owner": "663f5c60041a9039b481109d"
     }
 ]

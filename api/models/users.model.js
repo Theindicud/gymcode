@@ -59,7 +59,7 @@ const schema = new Schema(
         },
         role: {
             type: String,
-            enum: ["admin","coach", "pupil"],
+            enum: ["admin","coach","pupil"],
             default: "pupil"
         },
     },

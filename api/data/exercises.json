@@ -3,60 +3,60 @@
         "name": "Sentadillas",
         "description": "Las sentadillas son un ejercicio compuesto que trabaja varios grupos musculares, incluyendo cuádriceps, glúteos, isquiotibiales y músculos de la espalda baja.",
         "bodyZone": "Piernas",
-        "owner": "66351a19fc444f50fbcf698c"
+        "owner": "663f5c60041a9039b481109d"
     },
     {
         "name": "Flexiones de Pecho",
         "description": "Las flexiones de pecho son un ejercicio clásico para trabajar el pecho, los hombros y los tríceps.",
         "bodyZone": "Pecho",
-        "owner": "66351a19fc444f50fbcf698c"
+        "owner": "663f5c60041a9039b481109d"
     },
     {
         "name": "Dominadas",
         "description": "Las dominadas son un ejercicio efectivo para trabajar los músculos de la espalda, los hombros y los brazos.",
         "bodyZone": "Espalda alta",
-        "owner": "66351a19fc444f50fbcf698c"
+        "owner": "663f5c60041a9039b481109d"
     },
     {
         "name": "Press de Hombros",
         "description": "El press de hombros es un ejercicio que se enfoca en los músculos deltoides del hombro.",
         "bodyZone": "Hombros",
-        "owner": "66351a19fc444f50fbcf698c"
+        "owner": "663f5c60041a9039b481109d"
     },
     {
         "name": "Plancha",
         "description": "La plancha es un ejercicio de fortalecimiento del core que trabaja los músculos abdominales, lumbares y del torso.",
         "bodyZone": "Core",
-        "owner": "66351a19fc444f50fbcf698c"
+        "owner": "663f5c60041a9039b481109d"
     },
     {
         "name": "Peso muerto",
         "description": "El peso muerto es un ejercicio de levantamiento de pesas que se centra en el fortalecimiento de la espalda baja, los glúteos y los isquiotibiales.",
         "bodyZone": "Espalda baja",
-        "owner": "66351a19fc444f50fbcf698c"
+        "owner": "663f5c60041a9039b481109d"
     },
     {
         "name": "Burpees",
         "description": "Los burpees son un ejercicio de cuerpo completo que involucra flexiones, saltos y sentadillas, proporcionando un gran ejercicio cardiovascular y de fuerza.",
         "bodyZone": "Full body",
-        "owner": "66351a19fc444f50fbcf698c"
+        "owner": "663f5c60041a9039b481109d"
     },
     {
         "name": "Elevación de talones",
         "description": "La elevación de talones es un ejercicio que se enfoca en los músculos de la pantorrilla y ayuda a fortalecer y tonificar esta área.",
         "bodyZone": "Piernas",
-        "owner": "66351a19fc444f50fbcf698c"
+        "owner": "663f5c60041a9039b481109d"
     },
     {
         "name": "Flexiones de tríceps",
         "description": "Las flexiones de tríceps son un ejercicio efectivo para fortalecer los músculos del tríceps en la parte posterior del brazo.",
         "bodyZone": "Brazos",
-        "owner": "66351a19fc444f50fbcf698c"
+        "owner": "663f5c60041a9039b481109d"
     },
     {
         "name": "Abdominales cruzados",
         "description": "Los abdominales cruzados son un ejercicio que se centra en los músculos oblicuos y ayuda a tonificar y fortalecer el área abdominal.",
         "bodyZone": "Core",
-        "owner": "66351a19fc444f50fbcf698c"
+        "owner": "663f5c60041a9039b481109d"
     }
 ]
