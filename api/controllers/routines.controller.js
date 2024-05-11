@@ -33,6 +33,8 @@ module.exports.list = (req, res, next) => {
     if (equipmentNecessary) criteria.equipmentNecessary = equipmentNecessary;
 
     Routine.find(criteria)
+        .populate("exercises.exercise")
+        .populate("owner")
         .sort({ _id: -1 })
         .skip(page * limit)
         .limit(limit)
@@ -63,6 +65,8 @@ module.exports.update = (req, res, next) => {
 
 module.exports.detail = (req, res, next) => {
     Routine.findById(req.params.id)
+      .populate("exercises.exercise")
+      .populate("owner")     
       .then((routine) => {
         if (routine) {
             res.json(routine)

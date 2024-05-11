@@ -1,3 +1,4 @@
+
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
@@ -31,7 +32,7 @@ const routineSchema = new Schema({
             {
                 exercise: {
                     type: Schema.Types.ObjectId,
-                    ref: 'Ennpxercise'
+                    ref: 'Exercise'
                 },
                 equipment: {
                     type: [{
@@ -75,6 +76,7 @@ const routineSchema = new Schema({
         },
     }
 );
+
 
 
 const Routine = mongoose.model('Routine', routineSchema);
