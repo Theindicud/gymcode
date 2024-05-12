@@ -28,14 +28,15 @@ function RoutinesList({ routineType, difficulty, equipmentNecessary, limit, page
 
     return (
         <>
+        <div className="routines-list-container">
+            <div className="row row-columns-3">
 
-        <div className="row row-columns-3">
-
-            {routines.map((routine) => (
-                <Link to={`/routines/${routine.id}`} className="col">
-                    <RoutineItem routine={routine} />
-                </Link>
-            ))}
+                {routines.map((routine) => (
+                    <Link to={`/routines/${routine.id}`} className="col">
+                        <RoutineItem routine={routine} />
+                    </Link>
+                ))}
+            </div>
         </div>
         </>
 

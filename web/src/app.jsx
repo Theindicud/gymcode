@@ -21,7 +21,7 @@ function App() {
     <>
       <Navbar />
 
-      <main className="flex-shrink-0 py-5" >
+      <main className="flex-shrink-0" >
         <AlertProvider>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -36,7 +36,7 @@ function App() {
         </AlertProvider>
       </main>
 
-      <Footer />
+      {/*<Footer />*/}
     </>
   );
 }
