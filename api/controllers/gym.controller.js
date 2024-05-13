@@ -16,12 +16,24 @@ module.exports.create = (req, res, next) => {
 };
 
 module.exports.list = (req, res, next) => {
-    const { name, photo, address, facilities, limit = 4, page = 0 } = req.query;
+    const { name, photo, address, lat, lng, facilities, limit = 4, page = 0 } = req.query;
     const criteria = {};
     if (name) criteria.name = name;
     if (photo) criteria.photo = photo;
     if (address) criteria.address = address;
     if (facilities) criteria.facilities = facilities;
+    if (lat && lng ) {
+        criteria.location = {
+            $near: {
+              $geometry: {
+                 type: "Point" ,
+                coordinates: [lng, lat]
+              },
+              $maxDistance: 15000,
+              $minDistance: 0
+            }
+          }
+    }
 
     Gym.find(criteria)
         //Aquí iría el populate de Coach
