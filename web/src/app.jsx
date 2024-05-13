@@ -7,6 +7,7 @@ import AboutUs from "./pages/info/aboutus";
 
 import Register from "./pages/user/register";
 import Login from "./pages/user/login";
+import Profile from "./pages/user/profile.jsx";
 
 import Routines from "./pages/routines/routinesList.jsx";
 import RoutineDetail from "./pages/routines/routineSingle.jsx";
@@ -27,6 +28,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/profile" element={<Profile />} />
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/routines" element={<Routines />} />
             <Route path="/routines/:id" element={<RoutineDetail />} />

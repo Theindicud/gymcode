@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import './register.css'
 
-import { createUser } from "../../services/api.service"
+import { createUser } from "../../services/api.service";
 import { useAlert } from "../../contexts/alert.context";
-
 
 function Register() {
     const navigate = useNavigate();
@@ -20,6 +20,7 @@ function Register() {
 
     const [error, setError] = useState();
     const [photo, setPhoto] = useState(null);
+    const [role, setRole] = useState("");
 
     useEffect(() => {
         navigator.geolocation.getCurrentPosition((position) => {
@@ -30,20 +31,23 @@ function Register() {
 
     async function onSubmit(data) {
         try {
-            setError(false)
+            setError(false);
 
             await createUser({
                 ...data,
-                photo: photo || 'https://asset.cloudinary.com/dznumjlzc/08ddc3023620c132c2f2927425c6b791',
+                photo:
+                    photo ||
+                    "https://asset.cloudinary.com/dznumjlzc/08ddc3023620c132c2f2927425c6b791",
+                role: role,
                 location: {
                     type: "Point",
-                    coordinates: [latitude.current, longitude.current]
+                    coordinates: [latitude.current, longitude.current],
                 },
             });
 
             navigate("/login");
         } catch (err) {
-            showAlert("error. review form data")
+            showAlert("error. review form data");
         }
     }
 
@@ -52,9 +56,12 @@ function Register() {
         setPhoto(file);
     }
 
+    function handleRoleChange(event) {
+        setRole(event.target.value);
+    }
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className="register-container" onSubmit={handleSubmit(onSubmit)}>
             {error && (
                 <div className="alert alert-danger">error. Review form data</div>
             )}
@@ -149,8 +156,22 @@ function Register() {
                     {...register("birthDate")}
                 />
             </div>
-            
-            <button type="submit" className="btn btn-success">
+            <div className="mb-3">
+                <label htmlFor="role" className="form-label">
+                    Rol
+                </label>
+                <select
+                    id="role"
+                    className="form-select form-select"
+                    value={role}
+                    onChange={handleRoleChange}
+                >
+                    <option value="" disabled>Elegir rol</option>
+                    <option value="coach">Coach</option>
+                    <option value="pupil">Alumno</option>
+                </select>
+            </div>
+            <button type="submit" className="btn btn-register">
                 Registro
             </button>
         </form>

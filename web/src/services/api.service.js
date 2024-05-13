@@ -39,6 +39,10 @@ export function getProfile() {
     return http.get("/profile");
 }
 
+export function getGyms(params) {
+    return http.get("/gyms", { params });
+}
+
 export function getRoutines(params) {
     return http.get("/routines", { params });
 }

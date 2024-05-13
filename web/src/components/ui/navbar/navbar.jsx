@@ -40,11 +40,11 @@ function Navbar() {
               aria-label="Close"
             ></button>
           </div>
-          <div className="offcanvas-body">
+          <div className=" offcanvas-body">
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="/">
-                  <i className="fa fa-home" aria-hidden="true"></i>
+                  <i className=" fa fa-home" aria-hidden="true"></i>
                 </a>
               </li>
               <li className="nav-item">
