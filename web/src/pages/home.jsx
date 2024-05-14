@@ -5,6 +5,7 @@ import AutocompleteInput from "../components/google/autocomplete/autocomplete-in
 import Map from "../components/google/map/map";
 import { useState } from 'react';
 import GymList from "../components/gyms/gym-list/gym-list";
+import CoachesCarousel from "../components/coaches/coaches-carousel/coaches-carousel";
 
 function Home() {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -42,6 +43,7 @@ function Home() {
             <GymList lat={lat} lng={lng} onUpdateGyms={handleGymsUpdate} />
             <h2>Nuestras mejores rutinas</h2>
             <RoutinesList limit={4}/>
+            <CoachesCarousel className="mb-4" />
         </>
     )
 }

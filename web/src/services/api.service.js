@@ -39,6 +39,13 @@ export function getProfile() {
     return http.get("/profile");
 }
 
+export function getAllCoaches() {
+    return http.get("/coaches")
+}
+
+export function  getCoachById() {
+    return http.get("/coach/:id", { params })
+}
 export function getGyms(params) {
     return http.get("/gyms", { params });
 }

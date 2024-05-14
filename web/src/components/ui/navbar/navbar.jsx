@@ -87,7 +87,7 @@ function Navbar() {
 
 
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/coaches">
                   Coach
                 </a>
               </li>
