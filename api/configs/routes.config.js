@@ -16,6 +16,8 @@ const multer = require('./multer.config')
 router.post("/users", users.create);
 router.post("/login", users.login);
 router.get("/profile", auth.checkAuth, users.profile);
+router.get("/coaches", users.getAllCoaches);
+router.get("/coach/:id", users.getCoachById);
 
 //ROUTINES CRUD
 
