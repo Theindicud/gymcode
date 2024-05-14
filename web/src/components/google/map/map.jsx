@@ -1,31 +1,38 @@
 import { useRef, useEffect } from 'react';
-
-function Map({ locations }) {
+function Map({ className = '', center, markers }) {
     const mapRef = useRef();
 
     useEffect(() => {
+        if (!window.google) {
+            console.error("Google Maps API not loaded");
+            return;
+        }
         const googleMap = new window.google.maps.Map(mapRef.current, {
-            center: center,
-            zoom: 15
+            center: {
+                 lat: 40.4167, 
+                 lng: -3.7033
+            },
+            zoom: 7
         });
+
         if (markers) {
             markers.forEach(({ lat, lng, title }) => {
                 new window.google.maps.Marker({
                     position: { lat, lng },
                     map: googleMap,
-                    title
+                    title: title
+
                 });
             });
+
         }
     }, [center, markers]);
 
+
     return (
-        <div ref={mapRef} style={{ width: '100%', height: '400px'}} className={className}>Map</div>
+        <div ref={mapRef} style={{ width: '100%', height: '400px' }} className={className}>Map</div>
     )
 }
 
-Map.defaultProps = {
-    className: ''
-}
 
 export default Map;

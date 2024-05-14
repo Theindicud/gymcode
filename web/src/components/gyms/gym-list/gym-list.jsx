@@ -1,20 +1,21 @@
 import { useEffect, useState } from "react";
 import { getGyms } from "../../../services/api.service";
 import GymItem from "../gym-item/gym-item";
-import { Link } from "react-router-dom";
 
 
-function GymList({ facilities, address, location, page, lat, lng, onUpdateGyms }) {
+function GymList({ facilities, address, location, page, lat, lng, onUpdateGyms = '() => {}' }) {
     const [gyms, setGyms] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
-        async function fetch() {
+        async function fetchGyms() {
+            setLoading(true);
             try {
                 const query = {};
-                if (facilities) query.facilities = facilities
-                if (address) query.address = address
-                if (location) query.location = location
-                if (limit) query.limit = limit;
+                if (facilities) query.facilities = facilities;
+                if (address) query.address = address;
+                if (location) query.location = location;
                 if (page) query.page = page;
                 if (lat && lng) {
                     query.lat = lat;
@@ -25,25 +26,34 @@ function GymList({ facilities, address, location, page, lat, lng, onUpdateGyms }
                 setGyms(gyms);
                 onUpdateGyms(gyms);
             } catch (error) {
-                console.error(error);
+                setError(error);
+            } finally {
+                setLoading(false);
             }
         }
-        fetch()
-    }, [facilities, address, location, page, lat, lng])
-}
+        fetchGyms();
+    }, [facilities, address, location, page, lat, lng]);
 
-return (
-    <div className='d-flex flex-column gap-2'>
-        <div className="row row-cols-5 g-2">
-            {gyms.map((gym) =>
-                <div key={gym.id} className="col"> <GymItem gym={gym} /></div>)}
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (error) {
+        return <div>Error: {error.message}</div>;
+    }
+
+    return (
+        <div className='d-flex flex-column gap-2'>
+            <div className="row row-cols-5 g-2">
+                {gyms.map((gym) => (
+                    <div key={gym.id} className="col">
+                        <GymItem key={gym.id} gym={gym} />
+                    </div>
+                ))}
+            </div>
         </div>
-    </div>
-)
-
-
-GymsList.defaultProps = {
-    onUpdateGyms: () => {}
+    );
 }
+
 
 export default GymList;
