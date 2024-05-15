@@ -48,13 +48,14 @@ module.exports.profile = (req, res) => {
     res.json(req.user)
 }
 
-module.exports.getAllCoaches = async (req, res, next) => {
-    try {
-        const coaches = await User.find({ role: 'coach'});
-        res.json(coaches);
-    } catch (error) {
-        next(error);
-    }
+module.exports.getAllCoaches = (req, res, next) => {
+    User.find({ role: 'coach' })
+        .then(coaches => {
+            res.json(coaches);
+        })
+        .catch(error => {
+            next(error);
+        });
 }
 
 module.exports.getCoachById = (req, res, next) => {
