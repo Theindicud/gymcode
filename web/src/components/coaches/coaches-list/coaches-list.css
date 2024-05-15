@@ -1,0 +1,28 @@
+.coach-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .coach-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .coach-item img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .coach-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .coach-item p {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }

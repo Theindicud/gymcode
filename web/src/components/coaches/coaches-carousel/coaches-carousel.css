@@ -1,0 +1,66 @@
+.coaches-home-container {
+    background-color: rgb(38, 64, 94);
+    margin-top: 5px;
+    padding: 30px;
+}
+
+.carousel-container {
+    max-width: 1000px;
+    margin: 10px auto; 
+    box-shadow: 3px 10px 28px 6px rgba(255, 255, 255, 0.62);
+    -webkit-box-shadow: 3px 10px 28px 6px rgba(255, 255, 255, 0.62);
+    -moz-box-shadow: 3px 10px 28px 6px rgba(255, 255, 255, 0.62);
+    border-radius: 10px;
+    
+  }
+  
+  
+  .custom-carousel {
+    width: 100%; 
+    border-radius: 10px;
+
+    
+  }
+  
+  .carousel-image {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 10px;
+    
+  }
+  
+  .legend {
+    color: #7a1d1d; 
+    position: absolute; 
+    bottom: 0;
+    width: 100%; 
+    padding: 10px; 
+    box-sizing: border-box;
+  }
+
+  .carousel-button:hover {
+    background-color: rgba(38, 64, 94);
+  }
+
+  .title-container-carousel {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    padding: 5px;
+  }
+  
+  .title-carousel {
+    font-weight: 900;
+    line-height: 1;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .subtitle-carousel {
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1;
+  }
+
+  
+  

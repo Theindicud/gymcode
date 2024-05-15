@@ -43,8 +43,8 @@ export function getAllCoaches() {
     return http.get("/coaches")
 }
 
-export function  getCoachById() {
-    return http.get("/coach/:id", { params })
+export function getCoachById(id) {
+    return http.get(`/coach/${id}`)
 }
 export function getGyms(params) {
     return http.get("/gyms", { params });

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getAllCoaches} from "../../../services/api.service";
 import CoachItem from "../coach-item/coach-item";
 import { Link } from "react-router-dom";
+import './coaches-list.css';
 
 function CoachesList({ name, lastName, photo, limit, page}) {
     const [coaches, setCoaches] = useState([]);
@@ -30,9 +31,10 @@ function CoachesList({ name, lastName, photo, limit, page}) {
         <div className="coaches-list-container">
             <div className="row row-columns-3">
                 {coaches.map((coach) => (
-                    <Link key={coach._id} to={`/coaches/${coach._id}`} className="col text-decoration-none">
+                    <Link to={`/coaches/${coach.id}`} className="coach-card-link">
                         <CoachItem coach={coach} />
                     </Link>
+                
                 ))}
             </div>
         </div>

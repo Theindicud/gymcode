@@ -11,8 +11,12 @@ import Profile from "./pages/user/profile.jsx";
 
 import Routines from "./pages/routines/routinesList.jsx";
 import RoutineDetail from "./pages/routines/routineSingle.jsx";
+
 import Exercises from "./pages/exercises/exercisesList.jsx";
 import ExerciseDetail from "./pages/exercises/exerciseSingle.jsx";
+
+import CoachesList from "./pages/coaches/coachesList.jsx";
+import CoachDetail from "./pages/coaches/coachSingle.jsx"; 
 
 import { AlertProvider } from "./contexts/alert.context";
 
@@ -34,6 +38,8 @@ function App() {
             <Route path="/routines/:id" element={<RoutineDetail />} />
             <Route path="/exercises" element={<Exercises />} />
             <Route path="/exercises/:id" element={<ExerciseDetail />} />
+            <Route path="/coaches" element={<CoachesList />} />
+            <Route path="/coaches/:id" element={<CoachDetail />} />
           </Routes>
         </AlertProvider>
       </main>

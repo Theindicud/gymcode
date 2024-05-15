@@ -1,3 +1,5 @@
+import './routine-detail.css';
+
 function RoutineDetail({ name, description, difficulty, routineType, exercises, owner }) {
 
     return (

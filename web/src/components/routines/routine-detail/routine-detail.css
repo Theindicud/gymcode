@@ -1,0 +1,34 @@
+.routine-detail-container {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  .routine-detail-container h2 {
+    margin-top: 0;
+  }
+  
+  .routine-detail-container p {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  
+  .routine-detail-container section {
+    margin-top: 20px;
+  }
+  
+  .routine-detail-container section div {
+    margin-bottom: 10px;
+  }
+  
+  .rounded-pill {
+    border-radius: 50px;
+    padding: 5px 15px;
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #333;
+    color: #fff;
+  }

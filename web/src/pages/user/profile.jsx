@@ -23,7 +23,7 @@ function Profile() {
                             <p>Fecha de Nacimiento:&nbsp;{formatDate(user.birthDate)}</p>
                         </div>
                         <div className="profile-photo">
-                            {user.photo && <img src={user.photo} alt="Foto de perfil" />}
+                            {user.photo && <img src={user.photo} />}
                     </div>
 
                 </>

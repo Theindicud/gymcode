@@ -41,9 +41,8 @@ function Home() {
             <AutocompleteInput className="mb-1" onPlaceChange={handlePlaceChange} />
             <Map className="mb-3" center={{ lat: parseFloat(lat), lng: parseFloat(lng) }} markers={locations} />
             <GymList lat={lat} lng={lng} onUpdateGyms={handleGymsUpdate} />
-            <h2>Nuestras mejores rutinas</h2>
             <RoutinesList limit={4}/>
-            <CoachesCarousel className="mb-4" />
+            <CoachesCarousel limit ={4} className="mb-4" />
         </>
     )
 }

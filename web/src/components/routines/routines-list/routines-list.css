@@ -1,0 +1,51 @@
+
+.routines-list-container {
+    margin-top: 20px;
+    padding: 20px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  
+  .col {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+  
+  .routine-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .routine-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .routine-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .routine-item p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+  
+  .text-decoration-none {
+    text-decoration: none;
+    color: inherit;
+  }
+  
