@@ -37,9 +37,7 @@ function RoutinesList({
       <div className="routines-list-container">
         <div className="title-container">
           <h1 className="title">NUESTRAS</h1>
-          <h1 className="subtitle">
-             RUTINAS
-          </h1>
+          <h1 className="subtitle">RUTINAS</h1>
         </div>
         <div className="row row-columns-3">
           {routines.map((routine) => (

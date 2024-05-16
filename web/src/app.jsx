@@ -13,6 +13,8 @@ import Profile from "./pages/user/profile.jsx";
 import Routines from "./pages/routines/routinesList.jsx";
 import RoutineDetail from "./pages/routines/routineSingle.jsx";
 
+import MyRoutines from "./pages/myRoutines/myRoutines.jsx";
+
 import Exercises from "./pages/exercises/exercisesList.jsx";
 import ExerciseDetail from "./pages/exercises/exerciseSingle.jsx";
 
@@ -41,6 +43,7 @@ function App() {
             <Route path="/exercises/:id" element={<ExerciseDetail />} />
             <Route path="/coaches" element={<CoachesList />} />
             <Route path="/coaches/:id" element={<CoachDetail />} />
+            <Route path="/myroutines" element={<MyRoutines />} />
           </Routes>
         </AlertProvider>
       </main>

@@ -66,6 +66,10 @@ export function getExercise(id) {
     return http.get(`/exercises/${id}`);
 }
 
+export function myRoutines(params) {
+    return http.get("/myroutines", { params })
+}
+
 export function logout() {
     localStorage.removeItem("token");
 }
