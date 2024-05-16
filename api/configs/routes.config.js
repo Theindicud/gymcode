@@ -5,6 +5,7 @@ const users = require("../controllers/users.controller");
 const routines = require("../controllers/routines.controller");
 const exercises = require("../controllers/exercises.controller");
 const gyms = require("../controllers/gym.controller");
+const subscriptions = require("../controllers/subscriptions.controller");
 
 const auth =  require("../middlewares/auth.middleware");
 
@@ -35,6 +36,10 @@ router.get("/exercises", exercises.list);
 router.get("/exercises/:id", exercises.detail);
 router.patch("/exercises/:id", auth.checkAuth, auth.checkRole("admin", "coach"), exercises.update);
 router.delete("/exercises/:id", auth.checkAuth, auth.checkRole("admin", "coach"), exercises.delete);
+
+// SUBS CRUD
+
+router.post("/subscriptions", auth.checkAuth, auth.checkRole("admin", "coach", "pupil"), subscriptions.follow);
 
 //GYMS CRUD
 
