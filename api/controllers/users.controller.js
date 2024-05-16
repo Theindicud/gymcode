@@ -48,15 +48,27 @@ module.exports.profile = (req, res) => {
     res.json(req.user)
 }
 
+let coaches = [];
+let lastFetchTime = 0;
+const fetchInterval = 60000; 
 module.exports.getAllCoaches = (req, res, next) => {
-    User.find({ role: 'coach' })
-        .then(coaches => {
-            res.json(coaches);
-        })
-        .catch(error => {
-            next(error);
-        });
-}
+    const currentTime = new Date().getTime();
+    
+    if (currentTime - lastFetchTime >= fetchInterval || coaches.length === 0) {
+        User.find({ role: 'coach' })
+            .then(coachesData => {
+                coaches = coachesData;
+                lastFetchTime = currentTime;
+                res.json(coaches);
+            })
+            .catch(error => {
+                next(error);
+            });
+    } else {
+        res.json(coaches);
+    }
+};
+
 
 module.exports.getCoachById = (req, res, next) => {
     const coachId = req.params.id;
