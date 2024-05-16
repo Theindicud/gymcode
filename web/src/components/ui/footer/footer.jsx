@@ -3,8 +3,8 @@ import './footer.css';
 
 function Footer() {
     return (
-        <div className="sticky-footer-wrapper footer-expand-lg fixed-bottom">
-            <footer className="mt-auto py-1 bg-dark text-white">
+        <div className="footer">
+        <footer className="mt-auto py-1 bg-dark text-white">
                 <div className="container-fluid p-2 pb-0">
                     <section>
                         <div className="row">

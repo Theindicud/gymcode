@@ -1,0 +1,24 @@
+.card {
+    background-color: #f8f9fa; 
+    border: 1px solid #dee2e6; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    margin-bottom: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.25rem; 
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    font-size: 1rem; 
+    color: #6c757d; 
+  }
+  
+  .card-text i {
+    color: red; 
+    margin-right: 5px; 
+  }
+  

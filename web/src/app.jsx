@@ -3,6 +3,7 @@ import Home from "./pages/home";
 
 import Navbar from "./components/ui/navbar/navbar";
 import Footer from "./components/ui/footer/footer";
+
 import AboutUs from "./pages/info/aboutus";
 
 import Register from "./pages/user/register";
@@ -44,7 +45,7 @@ function App() {
         </AlertProvider>
       </main>
 
-      {/*<Footer />*/}
+      <Footer />
     </>
   );
 }

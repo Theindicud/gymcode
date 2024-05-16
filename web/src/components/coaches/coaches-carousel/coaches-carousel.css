@@ -30,16 +30,20 @@
     
   }
   
-  .legend {
-    color: #7a1d1d; 
+  .carousel .slide .legend {
     position: absolute; 
     bottom: 0;
-    width: 100%; 
     padding: 10px; 
     box-sizing: border-box;
+    font-weight: 900;
+    line-height: 1;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 30px;
+
   }
 
   .carousel-button:hover {
+    padding: 5px;
     background-color: rgba(38, 64, 94);
   }
 

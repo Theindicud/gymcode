@@ -1,6 +1,6 @@
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
 import VideoHomeSection from "../components/videoHomeSection/videoHomeSection";
-import RoutinesList from "../components/routines/routines-list/routines-list";
+import RoutinesListHome from "../components/routines/routines-list-home/routines-list-home";
 import AutocompleteInput from "../components/google/autocomplete/autocomplete-input";
 import Map from "../components/google/map/map";
 import { useState } from 'react';
@@ -41,7 +41,7 @@ function Home() {
             <AutocompleteInput className="mb-1" onPlaceChange={handlePlaceChange} />
             <Map className="mb-3" center={{ lat: parseFloat(lat), lng: parseFloat(lng) }} markers={locations} />
             <GymList lat={lat} lng={lng} onUpdateGyms={handleGymsUpdate} />
-            <RoutinesList limit={4}/>
+            <RoutinesListHome limit={4}/>
             <CoachesCarousel limit ={4} className="mb-4" />
         </>
     )

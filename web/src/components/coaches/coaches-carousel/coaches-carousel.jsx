@@ -4,30 +4,28 @@ import { getAllCoaches } from "../../../services/api.service";
 import "./coaches-carousel.css";
 import { Link } from "react-router-dom";
 
-function CoachesCarousel(name, lastName, photo, limit, page) {
+function CoachesCarousel({ name, lastName, photo, limit }) {
   const [coaches, setCoaches] = useState([]);
 
-  useEffect(
-    () =>
-      async function fetchCoaches() {
+  useEffect(() => {
+    console.log("Fetching coaches...");
+    async function fetchCoaches() {
         try {
-          const query = {};
-          if (name) query.name = name;
-          if (lastName) query.lastName = lastName;
-          if (photo) query.photo = photo;
-          if (limit) query.limit = limit;
-          if (page) query.page = page;
+            const query = {};
+            if (name) query.name = name;
+            if (lastName) query.lastName = lastName;
+            if (photo) query.photo = photo;
+            if (limit) query.limit = limit;
 
-          const response = await getAllCoaches(query);
-          setCoaches(response.data);
+            const response = await getAllCoaches(query);
+            setCoaches(response.data);
         } catch (error) {
-          console.error(error);
+            console.error(error);
         }
+    }
+    fetchCoaches();
+}, [name, lastName, photo, limit]);
 
-        fetchCoaches();
-      },
-    [name, lastName, photo, limit, page]
-  );
 
   return (
     <div className="coaches-home-container">
@@ -43,15 +41,15 @@ function CoachesCarousel(name, lastName, photo, limit, page) {
           interval={3000}
           showThumbs={false}
           showStatus={false}
-          
+
           className="custom-carousel mb-3"
         >
           {coaches.map((coach) => (
             <div key={coach.id}>
               <img src={coach.photo} className="carousel-image"></img>
-              <a href={`/coaches/${coach.id}`}>
+              <Link to={`/coaches/${coach.id}`}>
                 <p className="legend">{`${coach.name} ${coach.lastName}`}</p>
-              </a>
+              </Link>
             </div>
           ))}
         </Carousel>

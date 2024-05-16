@@ -5,3 +5,15 @@
 .bg-opacity {
     background-color: rgba(0, 0, 0, 0.2);
 }
+
+
+.footer {
+    flex-shrink: 0; 
+    color: white; 
+    text-align: center;
+    background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
+  }
+  .content {
+    margin-bottom: 60px; 
+  }
+  
