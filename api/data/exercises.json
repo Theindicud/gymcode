@@ -1,62 +1,756 @@
-[
-    {
-        "name": "Sentadillas",
-        "description": "Las sentadillas son un ejercicio compuesto que trabaja varios grupos musculares, incluyendo cuádriceps, glúteos, isquiotibiales y músculos de la espalda baja.",
-        "bodyZone": "Piernas",
-        "owner": "663f5c60041a9039b481109d"
-    },
-    {
-        "name": "Flexiones de Pecho",
-        "description": "Las flexiones de pecho son un ejercicio clásico para trabajar el pecho, los hombros y los tríceps.",
-        "bodyZone": "Pecho",
-        "owner": "663f5c60041a9039b481109d"
-    },
-    {
-        "name": "Dominadas",
-        "description": "Las dominadas son un ejercicio efectivo para trabajar los músculos de la espalda, los hombros y los brazos.",
-        "bodyZone": "Espalda alta",
-        "owner": "663f5c60041a9039b481109d"
-    },
-    {
-        "name": "Press de Hombros",
-        "description": "El press de hombros es un ejercicio que se enfoca en los músculos deltoides del hombro.",
-        "bodyZone": "Hombros",
-        "owner": "663f5c60041a9039b481109d"
-    },
-    {
-        "name": "Plancha",
-        "description": "La plancha es un ejercicio de fortalecimiento del core que trabaja los músculos abdominales, lumbares y del torso.",
-        "bodyZone": "Core",
-        "owner": "663f5c60041a9039b481109d"
-    },
-    {
-        "name": "Peso muerto",
-        "description": "El peso muerto es un ejercicio de levantamiento de pesas que se centra en el fortalecimiento de la espalda baja, los glúteos y los isquiotibiales.",
-        "bodyZone": "Espalda baja",
-        "owner": "663f5c60041a9039b481109d"
-    },
-    {
-        "name": "Burpees",
-        "description": "Los burpees son un ejercicio de cuerpo completo que involucra flexiones, saltos y sentadillas, proporcionando un gran ejercicio cardiovascular y de fuerza.",
-        "bodyZone": "Full body",
-        "owner": "663f5c60041a9039b481109d"
-    },
-    {
-        "name": "Elevación de talones",
-        "description": "La elevación de talones es un ejercicio que se enfoca en los músculos de la pantorrilla y ayuda a fortalecer y tonificar esta área.",
-        "bodyZone": "Piernas",
-        "owner": "663f5c60041a9039b481109d"
-    },
-    {
-        "name": "Flexiones de tríceps",
-        "description": "Las flexiones de tríceps son un ejercicio efectivo para fortalecer los músculos del tríceps en la parte posterior del brazo.",
-        "bodyZone": "Brazos",
-        "owner": "663f5c60041a9039b481109d"
-    },
-    {
-        "name": "Abdominales cruzados",
-        "description": "Los abdominales cruzados son un ejercicio que se centra en los músculos oblicuos y ayuda a tonificar y fortalecer el área abdominal.",
-        "bodyZone": "Core",
-        "owner": "663f5c60041a9039b481109d"
-    }
-]
+[{
+  "_id": {
+    "$oid": "663f66fd048ae800a2fa9b65"
+  },
+  "name": "Sentadillas",
+  "description": "Las sentadillas son un ejercicio compuesto que trabaja varios grupos musculares, incluyendo cuádriceps, glúteos, isquiotibiales y músculos de la espalda baja.",
+  "bodyZone": "Piernas",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-11T12:39:25.234Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-11T12:39:25.234Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663f66fd048ae800a2fa9b66"
+  },
+  "name": "Flexiones de Pecho",
+  "description": "Las flexiones de pecho son un ejercicio clásico para trabajar el pecho, los hombros y los tríceps.",
+  "bodyZone": "Pecho",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-11T12:39:25.235Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-11T12:39:25.235Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663f66fd048ae800a2fa9b67"
+  },
+  "name": "Dominadas",
+  "description": "Las dominadas son un ejercicio efectivo para trabajar los músculos de la espalda, los hombros y los brazos.",
+  "bodyZone": "Espalda alta",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-11T12:39:25.235Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-11T12:39:25.235Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663f66fd048ae800a2fa9b69"
+  },
+  "name": "Plancha",
+  "description": "La plancha es un ejercicio de fortalecimiento del core que trabaja los músculos abdominales, lumbares y del torso.",
+  "bodyZone": "Core",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-11T12:39:25.235Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-11T12:39:25.235Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663f66fd048ae800a2fa9b6b"
+  },
+  "name": "Burpees",
+  "description": "Los burpees son un ejercicio de cuerpo completo que involucra flexiones, saltos y sentadillas, proporcionando un gran ejercicio cardiovascular y de fuerza.",
+  "bodyZone": "Full body",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-11T12:39:25.235Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-11T12:39:25.235Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663f66fd048ae800a2fa9b6d"
+  },
+  "name": "Flexiones de tríceps",
+  "description": "Las flexiones de tríceps son un ejercicio efectivo para fortalecer los músculos del tríceps en la parte posterior del brazo.",
+  "bodyZone": "Brazos",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-11T12:39:25.235Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-11T12:39:25.235Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663f66fd048ae800a2fa9b6c"
+  },
+  "name": "Elevación de talones",
+  "description": "La elevación de talones es un ejercicio que se enfoca en los músculos de la pantorrilla y ayuda a fortalecer y tonificar esta área.",
+  "bodyZone": "Piernas",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-11T12:39:25.235Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-11T12:39:25.235Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663f66fd048ae800a2fa9b6e"
+  },
+  "name": "Abdominales cruzados",
+  "description": "Los abdominales cruzados son un ejercicio que se centra en los músculos oblicuos y ayuda a tonificar y fortalecer el área abdominal.",
+  "bodyZone": "Core",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-11T12:39:25.235Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-11T12:39:25.235Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "663f66fd048ae800a2fa9b6a"
+  },
+  "name": "Peso muerto",
+  "description": "El peso muerto es un ejercicio de levantamiento de pesas que se centra en el fortalecimiento de la espalda baja, los glúteos y los isquiotibiales.",
+  "bodyZone": "Espalda baja",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-11T12:39:25.235Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-11T12:39:25.235Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66470c3af5e9c05d94224e15"
+  },
+  "name": "Postura del gato/vaca",
+  "description": "En posición de cuadrupedida: Inhala profundamente mientras curvas la parte baja de la espalda y levantas la cabeza, inclinando la pelvis hacia arriba como una 'vaca'. Exhala profundamente y mete el abdomen hacia adentro, arqueando la columna vertebral y bajando la cabeza y la pelvis como un 'gato'",
+  "bodyZone": "Espalda alta",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T07:50:18.605Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T07:50:18.605Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66470d29f5e9c05d94224e19"
+  },
+  "name": "Mahoma",
+  "description": "Se inicia el ejercicio desde la posición de cuadrupedia y, con la columna alineada, estiramos brazos hacia delante y los muslos hacia detrás llegando a tocar los talones con el trasero.'",
+  "bodyZone": "Espalda baja",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T07:54:17.277Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T07:54:17.277Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66470e55f5e9c05d94224e1d"
+  },
+  "name": "Postura del lagarto",
+  "description": "Desde la posición de cuadrupedia; adelanta el pie derecho, por fuera de la mano derecha, tu rodilla debe de estar en 90º. Aguanta la posición 5 segundos, vuelve a la posición inicial y cambia de pierna.",
+  "bodyZone": "Piernas",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T07:59:17.181Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T07:59:17.181Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66470f30f5e9c05d94224e21"
+  },
+  "name": "Flexiones de bíceps con bandas elásticas",
+  "description": "Sujeta la banda elástica con la planta del pie. Coge la banda con las manos dejando los brazos extendidos y, en esta posición, tira de la banda, doblando los codos hacia tus hombros para, después, volver a la posición inicial lentamente.",
+  "bodyZone": "Brazos",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T08:02:56.457Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T08:02:56.457Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66471036f5e9c05d94224e25"
+  },
+  "name": "Puentes de cadera",
+  "description": "Tumbado boca arriba, flexiona las piernas hasta que la planta de los pies se apoyen en el suelo. Inhala profundamente, y al expulsar el aire sube la cadera despacio. Quedate en la posición elevada 5 segundos y desciende de forma controlada y lentamente hasta llegar a la posición inicial.",
+  "bodyZone": "Glúteo",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T08:07:18.082Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T08:07:18.082Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66471110f5e9c05d94224e29"
+  },
+  "name": "Posición de la cobra",
+  "description": "Tumbado boca abajo con las manos apoyadas en el suelo bajo los hombros; al inhalar, presione hacia abajo a través de la parte superior de los pies y el pubis, levantando suavemente la cabeza y el pecho del suelo. Mantenga esta posición 3 segundos y vuelva a la posición inicial.",
+  "bodyZone": "Espalda baja",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T08:10:56.562Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T08:10:56.562Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66471188f5e9c05d94224e2d"
+  },
+  "name": "Estiramiento de mariposa",
+  "description": "Siéntese erguido en el suelo con las plantas de los pies juntas y rodillas dobladas hacia los lados. Baje lentamente el cuerpo hacia los pies lo más que pueda mientras presiona las rodillas hacia el suelo. Mantener 30 segundos y volver a la posición inicial.",
+  "bodyZone": "Espalda alta",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T08:12:56.313Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T08:12:56.313Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6647126ff5e9c05d94224e31"
+  },
+  "name": "Monster walk",
+  "description": "Con una banda elástica alrededor de ambos tobillos, camine lateralmente 'como un cangrejo' con pasos muy cortos, manteniendo las rodillas un poco flexionadas",
+  "bodyZone": "Piernas",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T08:16:47.380Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T08:16:47.380Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66471323f5e9c05d94224e35"
+  },
+  "name": "Estiramiento de isquiotibiales boca arriba",
+  "description": "Tumbado boca arriba y con una pierna extendida hacia arriba y otra hacia en el suelo. Agarre el muslo levantado con las manos y tire de él hacia el pecho. Mantenga el estiramiento 5 segundos y cambia de pierna.",
+  "bodyZone": "Piernas",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T08:19:47.844Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T08:19:47.844Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "664713bcf5e9c05d94224e39"
+  },
+  "name": "Torsiones de torso",
+  "description": "Acostado boca arriba, con los brazos en cruz y las rodillas y caderas flexionadas 90º. Lleve las rodillas hacia un lado lentamente y, sin levantar la espalda del lado contrario, mantenga la posición 5 segundos, volviendo a la posición inicial. Repita hacia el otro lado.",
+  "bodyZone": "Core",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T08:22:20.561Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T08:22:20.561Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66471473f5e9c05d94224e3d"
+  },
+  "name": "Plancha alta con mancuerna",
+  "description": "Desde una posición de plancha alta y pon una mancuerna horizontalmente tras la muñeca derecha y muévelo con la mano derecha hacia la posición de la derecha mientras te apoyas sobre el brazo izquierdo y después con el brazo izquierdo lo arrastras hacia ese lado apoyado en el brazo derecho. Alternar continuamente.",
+  "bodyZone": "Core",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T08:25:23.294Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T08:25:23.294Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "664714b0f5e9c05d94224e41"
+  },
+  "name": "Plancha lateral con mancuerna",
+  "description": "Empieza en una posición de plancha lateral sobre el lado derecho, con el antebrazo derecho en el suelo, el codo debajo del hombro formando una línea recta desde la cabeza a los pies. Sostén una mancuerna en tu mano izquierda y levanta el brazo izquierda hacia arriba. Baja lentamente las caderas hasta el suelo y levanta para volver a la posición inicial",
+  "bodyZone": "Core",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T08:26:24.435Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T08:26:24.435Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66471520f5e9c05d94224e45"
+  },
+  "name": "Plancha lateral",
+  "description": "Colócate sobre uno de tus costados, apoyándote en uno de los lados de tu cuerpo, con la pierna y el antebrazo. Ejerce fuerza y eleva tu cuerpo de tal manera que todo el peso esté repartido entre el antebrazo y el pie de ese lado. Mantén esta posición durante 40 segundos y cambia de lado.",
+  "bodyZone": "Core",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T08:28:16.257Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T08:28:16.257Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66471589f5e9c05d94224e49"
+  },
+  "name": "Remo renegado",
+  "description": "En posición de plancha alta. Poner una mancuerna bajo cada mano e ir levantando alternativamente el brazo con la pesa hasta la altura del tronco llevando el codo hacia atrás mientras te apoyas con el otro brazo.",
+  "bodyZone": "Core",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T08:30:01.184Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T08:30:01.184Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "664715e4f5e9c05d94224e4d"
+  },
+  "name": "Rodilla al suelo con elevación oblicua",
+  "description": "Con la rodilla izquierda postrada en el suelo y la otra pierna flexionada 90º con el pie derecho hacia adelante. Levanta una mancuerna de forma diagonal con las dos manos desde el lado de la pierna apoyada a la altura de la cadera hasta la zona alta del lado derecho. Invierta la posición y el lado del movimiento.",
+  "bodyZone": "Core",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T08:31:32.385Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T08:31:32.385Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6647162ef5e9c05d94224e51"
+  },
+  "name": "Russian Twist",
+  "description": "Empieza en posición sentada con los talones en el suelo y las rodillas flexionadas, sujetando una mancuerna o kettlebell delante del pecho con ambas manos. Inclínate hacia atrás en un ángulo de 45 grados, con los pies flexionados y los talones aún tocando el suelo. Manteniendo la mancuerna en el pecho y la espalda recta, rota el torso hacia la derecha hasta golpear la mancuerna con el suelo hacia el lado derecho. Alterna los lados.",
+  "bodyZone": "Core",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T08:32:46.314Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T08:32:46.314Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66471849f5e9c05d94224f27"
+  },
+  "name": "Press Arnold",
+  "description": "Las mancuernas frente a ti, las palmas hacia los hombros como si acabaras de hacer un curl de bíceps. Empuja las mancuernas hacia arriba por encima de la cabeza mientras giras los brazos hasta que las palmas miren hacia el lado contrario. Estira los brazos, haz una pausa e invierte el movimiento.",
+  "bodyZone": "Hombros",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T08:41:45.821Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T08:41:45.821Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "664718bcf5e9c05d94224f2b"
+  },
+  "name": "Paseo del granjero",
+  "description": "Con mancuernas a cada mano y con los codos y brazos estirados, camina hacia delante dando pasos cortos y rápidos. Recorra la distancia lo más rápido posible.",
+  "bodyZone": "Full body",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T08:43:40.092Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T08:43:40.092Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "664718fcf5e9c05d94224f30"
+  },
+  "name": "Devil press",
+  "description": "Sujeta las dos mancuernas, baja a la posición de press y realiza un burpee. Cuando empieces a levantarte, aprovecha el impulso para balancear las pesas entre las piernas y, a continuación, directamente por encima de la cabeza. Baja bajo control, vuelve al suelo y repite.",
+  "bodyZone": "Full body",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T08:44:44.216Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T08:44:44.216Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66471934f5e9c05d94224f34"
+  },
+  "name": "Dumbbell kickbacks",
+  "description": "Flexiona las caderas enviándolas detrás de los talones con la espalda plana. Empieza con los brazos flexionados, acercando las mancuernas a los muslos de modo que la parte superior de los brazos quede paralela al suelo. Estire los brazos hacia atrás con los antebrazos. Vuelva lentamente a la posición inicial y repita.",
+  "bodyZone": "Brazos",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T08:45:40.176Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T08:45:40.176Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66471e02f5e9c05d9422535d"
+  },
+  "name": "Elíptica",
+  "description": "Empiece a pedalear para encender la máquina. Dar unos pasos hacia delante debería encender la pantalla. Si no lo hace, busque el botón de 'start'. Para utilizar los brazos, cuando su pie izquierdo baje, deberá tirar hacia su cuerpo con la manilla derecha. Si mueve los brazos, realiza más ejercicio.",
+  "bodyZone": "Full body",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T09:06:10.604Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T09:06:10.604Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66471e9bf5e9c05d94225375"
+  },
+  "name": "Bicicleta estática",
+  "description": "Empiece a pedalear para encender la máquina. Dar unas pedaladas hacia delante debería encender la pantalla. Si no lo hace, busque el botón de 'start'. Puede graduar la intensidad o resistencia",
+  "bodyZone": "Piernas",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T09:08:43.487Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T09:08:43.487Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66471ed8f5e9c05d9422537d"
+  },
+  "name": "Cinta de correr",
+  "description": "Empiece a caminar para encender la máquina. Dar unos pasos hacia delante debería encender la pantalla. Si no lo hace, busque el botón de 'start'. Puede graduar la intensidad o resistencia",
+  "bodyZone": "Full body",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T09:09:44.730Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T09:09:44.730Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6647204ff5e9c05d9422538b"
+  },
+  "name": "Jalón con polea alta",
+  "description": "Retraiga sus omoplatos elevando su pecho hacia arriba. Contrayendo los músculos de su espalda, tire de su cuerpo hacia arriba hasta que su barbilla sobrepase la barra V mientras exhala. Vuelva a la posición inicial con un movimiento suave mientras inhala, evitando que los pesos en movimiento toquen el resto de la placas",
+  "bodyZone": "Espalda alta",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T09:15:59.717Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T09:15:59.717Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "664720cff5e9c05d942253bb"
+  },
+  "name": "Ejercicio pectoral en máquina",
+  "description": "Empuje las manillas juntos apretando los músculos pectorales mientras exhala. Sostenga 1 seg. Vuelva a la posición inicial con un suave movimiento mientras inhala. Los pesos en movimiento no deberían tocar el resto de las placas. MAntenga la espalda pegada a la almohadilla.",
+  "bodyZone": "Pecho",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T09:18:07.454Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T09:18:07.454Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6647213af5e9c05d942253bf"
+  },
+  "name": "Elevación de talones en maquina",
+  "description": "Las puntas de los pies deben estar en el escalón con los talones extendidos. Coloque sus pies separados al ancho de los hombros. Levante ligeramente las almohadillas con las piernas.",
+  "bodyZone": "Piernas",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T09:19:54.713Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T09:19:54.713Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6647218bf5e9c05d942253c3"
+  },
+  "name": "Aperturas cadera en máquina",
+  "description": "Descanse la espalda y la cabeza sobre la almohadilla trasera. Presione contra las almohadillas con las piernas para juntarlas mientras exhala. Vuelva a la posición inicial con un movimiento suave mientras inhala, evitando que los pesos en movimiento toquen el resto de la placas.",
+  "bodyZone": "Piernas",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T09:21:15.271Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T09:21:15.271Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "664721cff5e9c05d942253c7"
+  },
+  "name": "Extensión cuádriceps en máquina",
+  "description": "Coloque sus piernas debajo de la almohadilla con sus pies apuntando hacia delante. La almohadilla debe estar delante de sus tobillos, con sus rodillas a 90º, si no lo está, ajuste la máquina para ello. Con sus cuádriceps, extienda completamente sus rodillas mientras exhala. Aguante 1 segundo. Vuelva a la posición inicial con un movimiento suave mientras inhala, evitando que los pesos en movimiento toquen el resto de la placas.",
+  "bodyZone": "Piernas",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T09:22:23.238Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T09:22:23.238Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66472210f5e9c05d942253cb"
+  },
+  "name": "Curl femoral a una pierna en máquina",
+  "description": "Acuéstese boca abajo en la máquina para doblar las piernas con la almohadilla detrás de los tobillos (solo unos centímetros por encima de los talones). Doble la pierna derecha hacia arriba tanto como sea posible mientras exhala. Mantenga 1 seg. Vuelva a la posición inicial con un movimiento suave.",
+  "bodyZone": "Piernas",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T09:23:28.160Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T09:23:28.160Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6647231df5e9c05d942253cf"
+  },
+  "name": "Remo Pendlay con barra",
+  "description": "Sujeta la barra con las manos separadas un poco más del ancho de los hombros, lo que aumenta la implicación de los dorsales y mejora la amplitud de la espalda. Los hombros deben quedar a línea con las caderas y la espalda baja recta. Contrae el abdomen y deja la barra en el suelo de forma controlada. Con un movimiento explosivo, tira de la barra hacia tu esternón, bloqueando los hombros y las caderas. Vuelve a bajar la barra hacia el suelo de forma lenta y controlada, recupera la posición inicial y repite.",
+  "bodyZone": "Full body",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T09:27:57.398Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T09:27:57.398Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66472376f5e9c05d942253d3"
+  },
+  "name": "Peso muerto rumano",
+  "description": "De pie, con los pies separados al ancho de los hombros y la barra justo encima de tus pies. Flexiona ligeramente las rodillas y las caderas y baja el cuerpo hacia abajo para coger la barra, con las manos separadas un poco más del ancho de los hombros. Lleva las caderas hacia atrás, manteniendo una ligera flexión de las rodillas y la espalda recta. Contrae los isquiotibiales y los glúteos al máximo y tira de la barra hacia arriba, quedando esta lo más cerca del cuerpo posible. Contrae la espalda, el core y los glúteos en la parte alta del ejercicio. Aguanta esa posición 1-2 segundos y baja la barra de nuevo hacia el suelo de forma lenta y controlada, flexionando las rodillas y las caderas.",
+  "bodyZone": "Full body",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T09:29:26.240Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T09:29:26.240Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "664723e1f5e9c05d942253d7"
+  },
+  "name": "Press de banca",
+  "description": "Túmbate boca arriba en un banco y sujeta la barra con las manos separadas el ancho de los hombros. Apoya la espalda con firmeza en el banco. Coge aire y levanta la barra extendiendo los brazos hacia arriba en un movimiento potente y controlado. Aguanta esa posición 1-2 segundos y baja de nuevo la barra hacia el esternón de forma lenta y controlada flexionando los codos. Justo antes de que la barra toque tu pecho, vuelve a empujarla hacia arriba estirando los brazos y apretando los pectorales, con los pies apoyados firmemente en el suelo.",
+  "bodyZone": "Pecho",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T09:31:13.228Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T09:31:13.228Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66472425f5e9c05d942253db"
+  },
+  "name": "Zancadas con barra",
+  "description": "Carga la barra sobre tus hombros con las manos separadas más del ancho de los hombros y los pies separados el ancho de las caderas. Da un paso adelante con una pierna, contrae el core y retrae las escápulas. Realiza una sentadilla con la pierna adelantada y mantén la espalda recta y la mirada al frente. No permitas que la rodilla sobrepase los dedos del pie. Cuando las dos rodillas estén en un ángulo de 90º, aguanta esa posición 1-2 segundos y vuelve a la posición inicial. Cambia de pierna en cada repetición o realiza las repeticiones marcadas con una pierna y luego con la otra.",
+  "bodyZone": "Full body",
+  "owner": {
+    "$oid": "663f5c60041a9039b481109d"
+  },
+  "createdAt": {
+    "$date": "2024-05-17T09:32:21.889Z"
+  },
+  "updatedAt": {
+    "$date": "2024-05-17T09:32:21.889Z"
+  },
+  "__v": 0
+}]

@@ -39,18 +39,13 @@ const routineSchema = new Schema({
                         type: String,
                         enum: ['Ninguno', 'Banda elástica', 'Mancuerna', 'Barra', 'Máquina']
                     }],
-                    required: true,
                     default: ['Ninguno']
                 },
                 series: {
                     type: Number,
-                    required: true,
-                    default: 1
                 },
                 repetitions: {
                     type: Number,
-                    required: true,
-                    default: 10
                 },
                 weight: Number,
                 duration: Number
