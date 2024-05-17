@@ -4,17 +4,17 @@ const Schema = mongoose.Schema;
 
 const subscriptionSchema = new Schema(
     {
-        subscribers: [{
+        subscriber: {
             
             type: Schema.Types.ObjectId,
             ref: 'User',
             required: true
-        }],
-        routines: [{
+        },
+        routine: {
             type: Schema.Types.ObjectId,
             ref: 'Routine',
             required: true
-        }]
+        }
     },
     { 
         timestamps: true,

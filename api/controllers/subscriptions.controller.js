@@ -5,8 +5,8 @@ const Subscription = require("../models/subscriptions.model");
 
 module.exports.follow = async (req, res) => {
     try {
-        const { subscribers, routines } = req.body;
-        const newSub = new Subscription({ subscribers, routines });
+        const { routine } = req.body;
+        const newSub = new Subscription({ subscriber: req.user.id, routine });
         const savedSub = await newSub.save();
         res.status(201).json(savedSub)
     } catch (error) {

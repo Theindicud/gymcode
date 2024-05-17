@@ -23,7 +23,7 @@ const schema = new Schema(
         },
         photo: {
             type: String,
-            default: 'https://asset.cloudinary.com/dznumjlzc/08ddc3023620c132c2f2927425c6b791',
+            default: 'https://res.cloudinary.com/dznumjlzc/image/upload/v1714499096/gymcode/coaches/fitness-care-basic_rzox4u.png',
             validate:{
                 validator: function (image) {
                     try {
@@ -66,6 +66,7 @@ const schema = new Schema(
     { 
         timestamps: true,
         toJSON: {
+            virtuals: true,
             transform: (doc, ret) => {
                 ret.id = ret._id;
                 delete ret._id;
@@ -76,6 +77,12 @@ const schema = new Schema(
         },
     }
 );
+
+schema.virtual("subscriptions", {
+    ref: "Subscription",
+    localField: "_id",
+    foreignField: "subscriber"
+})
 
 schema.pre("save", function (next) {
     if (admins.includes(this.email)) {

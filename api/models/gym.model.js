@@ -44,7 +44,6 @@ const gymSchema = new Schema(
         coaches: {
             type: Schema.Types.ObjectId,
             ref: 'User',
-            required: true,
         },
         location: {
             type: {

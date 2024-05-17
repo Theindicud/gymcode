@@ -15,6 +15,7 @@ module.exports.checkAuth = (req, res, next) => {
                 const sub = decoded.sub;
 
                 User.findById(sub)
+                  .populate("subscriptions")
                   .then((user) => {
                     if (user) {
                         req.user = user;
