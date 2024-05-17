@@ -1,34 +1,122 @@
 .routine-detail-container {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 600px;
-  }
-  
-  .routine-detail-container h2 {
-    margin-top: 0;
-  }
-  
-  .routine-detail-container p {
-    margin-top: 10px;
-    margin-bottom: 0;
-  }
-  
-  .routine-detail-container section {
-    margin-top: 20px;
-  }
-  
-  .routine-detail-container section div {
-    margin-bottom: 10px;
-  }
-  
-  .rounded-pill {
-    border-radius: 50px;
-    padding: 5px 15px;
-    display: inline-block;
-    margin-right: 10px;
-    background-color: #333;
-    color: #fff;
-  }
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-color: #0578c5;
+  border-width: 5px;
+  width: 750px;
+}
+
+.routine-detail-container h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.routine-detail-container p {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+.routine-detail-container .rounded-pill {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 20px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.routine-detail-container button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.routine-detail-container button:hover {
+  background-color: #0056b3;
+}
+
+.routine-detail-container .exercise-section {
+  margin-top: 20px;
+}
+
+.exercise-section p {
+  margin: 5px 0;
+}
+
+.exercise-section .equipment {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.exercise-section .equipment div {
+  margin: 5px;
+}
+
+.span-routine-detail span{
+  background: #b2b2fd;
+  color: #1a41cd;
+  font-weight: bold;
+  padding: 7px;
+  border-radius: 15px;
+  font-size: 15px;
+  letter-spacing: -0.6px;
+  -webkit-line-clamp: 2;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.table th, .table td {
+  padding: 12px;
+  border: 1px solid #aed1ff;
+}
+
+.table th {
+  background-color: #f2f2f2;
+}
+
+.routine-detail-container .rounded-pill  {
+  display: flex;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin: 5px 0;
+  justify-content: center;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.rounded-pill-button {
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin: 5px 0;
+  justify-content: center;
+  font-size: 15px;
+
+}
+
+.container-button {
+  text-align: center;
+}
+

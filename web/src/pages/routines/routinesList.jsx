@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import RoutinesList from "../../components/routines/routines-list/routines-list";
+import './routineList.css'
 
 function Routines() {
     const params = useParams();

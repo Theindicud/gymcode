@@ -13,7 +13,6 @@ function Routine() {
         async function fetchRoutine() {
             try {
                 const { data } = await getRoutine(id);
-                console.info({data})
                 setRoutine(data);
                 setLoading(false)
             } catch (error) {

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { getRoutines } from "../../../services/api.service";
-import RoutineItem from "../routine-item/routine-item";
-import { Link } from "react-router-dom";
+import RoutineCard from "../routine-card/routine-card";
 import "./routines-list.css";
 
 function RoutinesList({
@@ -35,19 +34,9 @@ function RoutinesList({
   return (
     <>
       <div className="routines-list-container">
-        <div className="title-container">
-          <h1 className="title">NUESTRAS</h1>
-          <h1 className="subtitle">RUTINAS</h1>
-        </div>
-        <div className="row row-columns-3">
+        <div className="row">
           {routines.map((routine) => (
-            <Link
-              key={routine.id}
-              to={`/routines/${routine.id}`}
-              className="col text-decoration-none"
-            >
-              <RoutineItem routine={routine} />
-            </Link>
+            <RoutineCard key={routine.id} routine={routine} />
           ))}
         </div>
       </div>

@@ -1,23 +1,23 @@
-
 .routines-list-container {
-    margin-top: 20px;
-    padding: 20px;
-  }
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
   
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-  }
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
   
-  .col {
-    flex: 0 0 33.33333%;
-    max-width: 33.33333%;
-    padding-right: 15px;
-    padding-left: 15px;
-    box-sizing: border-box;
-  }
+.col {
+  flex: 1 0 30%;
+  max-width: 30%;
+  min-width: 250px;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
   
   .routine-item {
     background-color: #f9f9f9;
@@ -49,3 +49,20 @@
     color: inherit;
   }
   
+
+
+
+@media (max-width: 768px) {
+  .col {
+      flex: 1 0 45%;
+      max-width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .col {
+      flex: 1 0 90%;
+      max-width: 90%;
+  }
+}
+
