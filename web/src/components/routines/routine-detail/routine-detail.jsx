@@ -9,10 +9,13 @@ function RoutineDetail({
   routineType,
   exercises,
   equipmentNecessary,
+  id,
   owner,
 }) {
   return (
-    <section>
+    <>
+    <section className="parent-container">
+      <div className="super-container-detail">
       <div className="routine-detail-container m-3">
         <h2>{name}</h2>
 
@@ -46,7 +49,7 @@ function RoutineDetail({
         </tr>
       </thead>
       <tbody>
-        {exercises.map((exercise, index) => (
+        {exercises?.map((exercise, index) => (
           <tr key={index}>
             <td>{exercise.exercise.name}</td>
             <td>
@@ -58,18 +61,19 @@ function RoutineDetail({
             </td>
             <td>{exercise.series}</td>
             <td>{exercise.repetitions}</td>
-            <td>{exercise.weight !== undefined && exercise.weight !== 0 ? exercise.weight : ""}</td>
-            <td>{exercise.duration !== undefined && exercise.duration !== 0 ? exercise.duration : ""}</td>
+            <td>{exercise.weight > 0 && exercise.weight}</td>
+            <td>{exercise.duration > 0 && exercise.duration}</td>
           </tr>
         ))}
       </tbody>
     </table>
     <div className="container-button">
-  <button className="rounded-pill-button bg-black text-white">Suscríbete</button>
+    <button onClick={() => handleCreateSubs(id)} className="sub-button ">Suscríbete</button>
 </div>
       </div>
-
+      </div> 
     </section>
+    </>
   );
 }
 

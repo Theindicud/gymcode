@@ -66,7 +66,7 @@ function RoutinesListHome({
                     <h1 className="title-routine">Desata tu potencial</h1>
                     <h1 className="subtitle-routine">con nuestras rutinas </h1>
                 </div>
-                <div className="row row-columns-3 ">
+                <div className="row row-cols-2">
                     {routines.map((routine, index) => (
                         <div key={routine.id} className="col">
                             <Link to={`/routines/${routine.id}`} className="text-decoration-none">

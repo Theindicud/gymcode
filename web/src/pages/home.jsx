@@ -3,8 +3,8 @@ import VideoHomeSection from "../components/videoHomeSection/videoHomeSection";
 import RoutinesListHome from "../components/routines/routines-list-home/routines-list-home";
 import AutocompleteInput from "../components/google/autocomplete/autocomplete-input";
 import Map from "../components/google/map/map";
-import { useState } from 'react';
 import GymList from "../components/gyms/gym-list/gym-list";
+import { useState } from 'react';
 import CoachesCarousel from "../components/coaches/coaches-carousel/coaches-carousel";
 
 function Home() {
@@ -40,8 +40,8 @@ function Home() {
             <VideoHomeSection />
             <AutocompleteInput className="mb-1" onPlaceChange={handlePlaceChange} />
             <Map className="mb-3" center={{ lat: parseFloat(lat), lng: parseFloat(lng) }} markers={locations} />
-            <GymList lat={lat} lng={lng} onUpdateGyms={handleGymsUpdate} />
-            <RoutinesListHome limit={4}/>
+            <GymList lat={lat} lng={lng} onUpdateGyms={handleGymsUpdate}/>
+            <RoutinesListHome limit={3}/>
             <CoachesCarousel limit ={4} className="mb-4" />
         </>
     )

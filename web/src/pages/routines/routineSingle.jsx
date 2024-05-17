@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getRoutine } from '../../services/api.service';
 import RoutineDetail from '../../components/routines/routine-detail/routine-detail';
+import './routineSingle.css'
+
 
 function Routine() {
     const { id } = useParams();
@@ -27,12 +29,20 @@ function Routine() {
     
     
     return (
-        <section className='mt-20'>
+        <section className='mt-20 routine-section'>
+
+            <h1>Detalles de la Rutina</h1>
+
+
+            <div className='container-routines'>
             {loading ? (
-                <p><i class="fa fa-spinner" aria-hidden="true"></i>Cargando...</p>
+               <div class="spinner-border text-primary" role="status">
+               <span class="sr-only">Cargando...</span>
+             </div>
             ) : (
                 <RoutineDetail {...routine} />
             )}
+            </div>
         </section>
     );
 

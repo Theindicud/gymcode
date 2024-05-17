@@ -1,3 +1,39 @@
+
+
+
+
+.parent-container::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%; 
+  height: 100%;
+  background-image: url('https://res.cloudinary.com/dznumjlzc/image/upload/v1715964723/gymcode/background/3_gvgsgl.png');
+  background-size: cover;   
+  opacity: 0.5; 
+  z-index: -1; 
+}
+
+.routine-detail-container {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: rgba(249, 249, 249, 0.8); 
+  border-color: #0578c5;
+  border-width: 5px;
+  width: 750px;
+  height: auto;
+  z-index: 1; 
+}
+
+.super-container-detail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 800px; 
+}
+
 .routine-detail-container {
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -6,6 +42,7 @@
   border-color: #0578c5;
   border-width: 5px;
   width: 750px;
+  height: auto;
 }
 
 .routine-detail-container h2 {
@@ -29,16 +66,6 @@
   font-size: 0.9em;
 }
 
-.routine-detail-container button {
-  padding: 10px 20px;
-  font-size: 1.2em;
-  color: #fff;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
 .routine-detail-container button:hover {
   background-color: #0056b3;
@@ -107,15 +134,40 @@
   text-align: center;
 }
 
-.rounded-pill-button {
-  padding: 5px 10px;
-  border-radius: 20px;
-  margin: 5px 0;
-  justify-content: center;
+.sub-button {
+  border: 1px solid black;
+  padding: 12px 30px 12px 30px;
+  border-radius: 30px;
+  background-color: #007bff;
+  font-weight: bolder;
   font-size: 15px;
+  -webkit-box-shadow: 0px 0px 1px;
+  box-shadow: 0px 0px 1px;
+  -webkit-transform: all 2s esase;
+  -ms-transform: all 2s esase;
+  transform: all 2s esase;
+  -webkit-transition-duration: .3s;
+  transition-duration: .3s;
+  color: white;
 
 }
+.sub-button:hover {
+  -webkit-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  transform: translateY(-10px);
+  -webkit-box-shadow: 0px 7px 1px rgb(0, 0, 0);
+  box-shadow: 0px 7px 1px rgb(0, 0, 0);
+  border: 1px solid black;
+}
 
+.sub-button:active {
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+  -webkit-box-shadow: 0px 0px 1px;
+  box-shadow: 0px 0px 1px;
+}
+  
 .container-button {
   text-align: center;
 }

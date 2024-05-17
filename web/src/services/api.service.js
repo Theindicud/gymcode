@@ -27,6 +27,10 @@ export function createUser(data) {
     return http.post("/users", data)
 }
 
+export function createSubscription(routine) {
+    return http.post("/subscriptions", { routine })
+}
+
 export function login(data) {
     return http.post("/login", data).then((response) => {
         localStorage.setItem("token", response.data.accessToken);
