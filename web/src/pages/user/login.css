@@ -1,11 +1,48 @@
+/* login.css */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.super-container-user {
+  position: relative; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; 
+  padding: 20px; 
+  box-sizing: border-box;
+  overflow: hidden; 
+}
+
+.super-container-user::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url('https://res.cloudinary.com/dznumjlzc/image/upload/v1715967073/gymcode/background/4_rt22m9.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.5;
+  z-index: -1;
+}
+
 .login-container {
-    max-width: 400px;
-    margin: 100px auto;
-    padding: 20px;
-    height: auto;
-    border-radius: 8px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  background: #fff; 
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  border-radius: 8px;
+  z-index: 1; 
+}
+
   
   .form-label {
     font-weight: bold;

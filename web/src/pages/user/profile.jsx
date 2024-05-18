@@ -10,6 +10,7 @@ function Profile() {
     };
 
     return (
+        <div className="super-container-user">
         <div className="profile-container">
             {user && (
                 <>
@@ -29,6 +30,7 @@ function Profile() {
                 </>
             )}
             {!user && <p>No has iniciado sesión. Por favor, inicia sesión para ver tu perfil.</p>}
+        </div>
         </div>
     );
 }

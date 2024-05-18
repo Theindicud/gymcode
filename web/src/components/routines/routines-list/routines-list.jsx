@@ -36,7 +36,7 @@ function RoutinesList({
   };
 
   const handleRoutineTypeChange = (event) => {
-    setRoutineType(event.target.value === "Todos" ? null : event.target.value);
+    setRoutineType(event.target.value === "all" ? null : event.target.value);
   };
 
   return (
@@ -45,7 +45,7 @@ function RoutinesList({
 
         <div className="radio-inputs">
         <label>
-            <input className="radio-input" type="radio" name="routineType" value="Todos" checked={routineType === null} onChange={handleRoutineTypeChange} />
+            <input className="radio-input" type="radio" name="routineType" value="all" checked={routineType === null} onChange={handleRoutineTypeChange} />
             <span className="radio-icon">
             <img src="https://res.cloudinary.com/dznumjlzc/image/upload/v1716037886/gymcode/icons/human-body_sheocs.svg" />
             </span>

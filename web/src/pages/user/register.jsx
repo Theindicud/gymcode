@@ -61,6 +61,7 @@ function Register() {
     }
 
     return (
+        <div className="super-container-user">
         <form className="register-container" onSubmit={handleSubmit(onSubmit)}>
             {error && (
                 <div className="alert alert-danger">error. Review form data</div>
@@ -175,6 +176,7 @@ function Register() {
                 Registro
             </button>
         </form>
+        </div>
     );
 }
 

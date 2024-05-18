@@ -16,7 +16,7 @@ function Login() {
         handleSubmit,
         formState: { errors },
     } = useForm();
-  
+
 
     async function onSubmit(data) {
         try {
@@ -28,38 +28,40 @@ function Login() {
     }
 
     return (
-        <div className="login-container">
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <div className="mb-3">
-                <label htmlFor="email" className="form-label">
-                <i class="fa fa-envelope" aria-hidden="true"></i> Correo electrónico 
-                </label>
-                <input 
-                  required
-                  id="email"
-                  type="email"
-                  className={`form-control ${errors.email ? "is-invalid" : ""}`}
-                  {...register("email")}
-                />
-            </div>
+        <div className="super-container-user">
+            <div className="login-container">
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <div className="mb-3">
+                        <label htmlFor="email" className="form-label">
+                            <i class="fa fa-envelope" aria-hidden="true"></i> Correo electrónico
+                        </label>
+                        <input
+                            required
+                            id="email"
+                            type="email"
+                            className={`form-control ${errors.email ? "is-invalid" : ""}`}
+                            {...register("email")}
+                        />
+                    </div>
 
-            <div className="mb-3">
-                <label htmlFor="password" className="form-label">
-                <i class="fa fa-key" aria-hidden="true"></i>  Contraseña 
-                </label>
-                <input 
-                  required
-                  id="password"
-                  type="password"
-                  className={`form-control ${errors.password ? "is-invalid" : ""}`}
-                  {...register("password")}
-                />
-            </div>
+                    <div className="mb-3">
+                        <label htmlFor="password" className="form-label">
+                            <i class="fa fa-key" aria-hidden="true"></i>  Contraseña
+                        </label>
+                        <input
+                            required
+                            id="password"
+                            type="password"
+                            className={`form-control ${errors.password ? "is-invalid" : ""}`}
+                            {...register("password")}
+                        />
+                    </div>
 
-            <button type="submit" className="btn btn-login">
-                Login
-            </button>
-        </form>
+                    <button type="submit" className="btn btn-login">
+                        Login
+                    </button>
+                </form>
+            </div>
         </div>
     );
 }
