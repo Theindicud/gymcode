@@ -74,11 +74,11 @@ function Navbar() {
 
               <li className="nav-item">
                 {user ? (
-                  <a className="nav-link" href="myroutines">
+                  <a className="nav-link" href="/myroutines">
                     Mis rutinas
                   </a>
                 ) : (
-                  <a className="nav-link" href="routines">
+                  <a className="nav-link" href="/routines">
                     Rutinas
                   </a>
                 )}
@@ -110,7 +110,7 @@ function Navbar() {
                     aria-labelledby="offcanvasNavbarDropdown"
                   >
                     <li>
-                      <a className="dropdown-item" href="#">
+                      <a className="dropdown-item" href="/profile">
                         Perfil
                       </a>
                     </li>
