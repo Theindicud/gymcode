@@ -13,3 +13,16 @@ module.exports.follow = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 }
+
+module.exports.showMySubscriptions = (req, res, next) => {
+    const userId = (req.user.id)
+    Subscription.find({ subscriber: userId })
+    .populate('routine')
+    .then(subscriptions => {
+        const routines = subscriptions.map(sub => sub.routine).filter(routine => routine)
+        res.status(200).json(routines);
+      })
+    .catch(error => {
+        res.status(500)
+    })
+}

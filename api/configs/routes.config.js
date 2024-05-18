@@ -40,6 +40,7 @@ router.delete("/exercises/:id", auth.checkAuth, auth.checkRole("admin", "coach")
 // SUBS CRUD
 
 router.post("/subscriptions", auth.checkAuth, auth.checkRole("admin", "coach", "pupil"), subscriptions.follow);
+router.get("/myroutines", auth.checkAuth, auth.checkRole("admin", "coach", "pupil"), subscriptions.showMySubscriptions);
 
 //GYMS CRUD
 

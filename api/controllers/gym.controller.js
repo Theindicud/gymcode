@@ -16,7 +16,7 @@ module.exports.create = (req, res, next) => {
 };
 
 module.exports.list = (req, res, next) => {
-    const { name, photo, address, lat, lng, facilities, limit = 4, page = 0 } = req.query;
+    const { name, photo, address, lat, lng, facilities} = req.query;
     const criteria = {};
     if (name) criteria.name = name;
     if (photo) criteria.photo = photo;
@@ -38,8 +38,6 @@ module.exports.list = (req, res, next) => {
     Gym.find(criteria)
         //Aquí iría el populate de Coach
         .sort({ _id: -1 })
-        .skip(page * limit)
-        .limit(limit)
         .then((gyms) => res.json(gyms))
         .catch(next);
 };
@@ -47,7 +45,6 @@ module.exports.list = (req, res, next) => {
 
 
 module.exports.update = (req, res, next) => {
-    console.log("ID del gimnasio:", req.params.id);
     Gym.findByIdAndUpdate(req.params.id, req.body, {
         runValidators:true,
         new: true,
