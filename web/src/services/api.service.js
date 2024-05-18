@@ -70,8 +70,8 @@ export function getExercise(id) {
     return http.get(`/exercises/${id}`);
 }
 
-export function myRoutines(params) {
-    return http.get("/myroutines", { params })
+export function myRoutines() {
+    return http.get("/myroutines")
 }
 
 export function logout() {

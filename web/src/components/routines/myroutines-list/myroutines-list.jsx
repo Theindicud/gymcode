@@ -2,7 +2,7 @@ import RoutineItem from "../routine-item/routine-item";
 import { myRoutines } from "../../../services/api.service";
 import { useEffect, useState } from "react";
 
-function MyRoutinesList() {
+function MyRoutinesList({ routine }) {
     const [userRoutines, setUserRoutines] = useState([]);
 
     useEffect(() => {
@@ -18,14 +18,14 @@ function MyRoutinesList() {
     
         fetchMyRoutines();
     }, []);
-
+    console.log(userRoutines)
     return (
         <div className="myroutines-list-container">
             <h1>Mis Rutinas</h1>
             <div className="row row-columns-3">
-                {routines.map(routine => (
-                    <div key={routine._id} className="col">
-                        <RoutineItem routine={routine} />
+                {userRoutines.map(r => (
+                    <div key={r._id} className="col">
+                        <RoutineItem routine={r} />
                     </div>
                 ))}
             </div>

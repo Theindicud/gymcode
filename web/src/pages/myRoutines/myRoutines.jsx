@@ -8,7 +8,7 @@ function MyRoutines() {
 
     return (
         <div className="container-routines">
-            <h1>Rutinas {params.id}</h1>
+            <h1>Mis rutinas {params.id}</h1>
             <MyRoutinesList />
             
         </div>

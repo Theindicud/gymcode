@@ -25,6 +25,7 @@ function Map({ className = '', center, markers }) {
         });
 
         if (markers) {
+            console.log(markers)
             markers.forEach(({ lat, lng, title }) => {
                 new window.google.maps.Marker({
                     position: { lat, lng },

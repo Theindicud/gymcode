@@ -74,7 +74,7 @@ function Navbar() {
 
               <li className="nav-item">
                 {user ? (
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="myroutines">
                     Mis rutinas
                   </a>
                 ) : (
