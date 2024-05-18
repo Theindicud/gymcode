@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import './autocomplete-input.css';
 
 const autocompleteOptions = {
   componentRestrictions: { country: "es" },
@@ -36,15 +37,16 @@ function AutocompleteInput({ className = "", onPlaceChange ="(location) => conso
   }, []);
 
   return (
-    <div className={`form-floating ${className}`}>
+    <div className={`form-floating ${className}`}  style={{ maxWidth: "100%" }}>
       <input
         ref={autocompleteInputRef}
         type="text"
-        className="form-control"
+        className="form-control text-container"
         id="autocomplete-input"
         placeholder=""
+        style={{ maxWidth: "100%" }}
       />
-      <label htmlFor="autocomplete-input">
+      <label htmlFor="autocomplete-input" className="text-container">
         Busca los gimnasios de nuestros entrenadores más cercanos
       </label>
     </div>

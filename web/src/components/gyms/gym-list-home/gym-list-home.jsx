@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { getGyms } from "../../../services/api.service";
+import './gym-list-home.css';
+
 
 
 function GymList({ facilities, address, location, page, lat, lng, onUpdateGyms = '() => {}' }) {
@@ -42,18 +44,17 @@ function GymList({ facilities, address, location, page, lat, lng, onUpdateGyms =
     }
 
     return (
-        <div className='d-flex flex-column'>
-            <div className="row">
-                <ul> 
-                    {gyms.map((gym) => (
-                        <div key={gym.id} className="col">
-                            <strong>{gym.title}</strong>: {gym.address}
-                        </div>
-                    ))}
-                </ul> 
-            </div>
+        <div className='home-list-gym'>
+            <ol className="gym-list">
+                {gyms.map((gym, index) => (
+                    <li key={gym.id} className="list-item">
+                        <span className="gym-name"> {gym.name}</span>
+                    </li>
+                ))}
+            </ol>
         </div>
     );
+    
     
 }
 

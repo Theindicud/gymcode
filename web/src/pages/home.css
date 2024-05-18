@@ -1,0 +1,38 @@
+.filter-map-list-container-father {
+    flex-direction: column;
+    height: 70vh;
+}
+
+.filter-map-list-head {
+    text-align: center;
+    color: #000;
+    padding: 15px;
+    text-transform: uppercase;
+  }
+  
+  .filter-map-list-title h1 {
+    font-weight: 900;
+    line-height: 1;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .filter-map-list-subtitle h1 {
+    font-weight: normal;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1;
+  }
+
+
+  .filter-map-home {
+    width: 600px;
+    margin-right: 20px; 
+  }
+
+  .filter-map-list-container-child {
+    background-color: rgb(38, 64, 94);
+    flex: 1;
+    padding: 25px;
+    justify-content: center;
+    display: flex;
+  }
+

@@ -21,7 +21,7 @@ function Map({ className = '', center, markers }) {
                  lat: 40.4167, 
                  lng: -3.7033
             },
-            zoom: 6
+            zoom: 5.5
         });
 
         if (markers) {
