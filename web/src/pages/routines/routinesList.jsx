@@ -7,14 +7,14 @@ function Routines() {
 
     return (
         <div  className="container-super-routine">
-        <div className="super-container">
-            <h1>Rutinas {params.id}</h1>
+            <div className="super-container">
+                <h1>Rutinas {params.id}</h1>
 
-            <div className="routines-container">
-                <RoutinesList />
-                
+                <div className="routines-container">
+                    <RoutinesList />
+                    
+                </div>
             </div>
-        </div>
         </div>
     )
 }

@@ -24,9 +24,7 @@ function Footer() {
                                 <p>
                                     <a className="text-white" href="/register">Registrate</a>
                                 </p>
-                                <p>
-                                    <a className="text-white" href="/help">Ayuda</a>
-                                </p>
+            
                             </div>
                             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                                 <h6 className="text-uppercase mb-4 font-weight-bold">Contacto</h6>

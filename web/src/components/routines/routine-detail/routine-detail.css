@@ -1,7 +1,4 @@
 
-
-
-
 .parent-container::before {
   content: "";
   position: absolute;

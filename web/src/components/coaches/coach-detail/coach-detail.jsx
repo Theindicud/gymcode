@@ -1,17 +1,25 @@
-
+import "./coach-detail.css"
 function CoachDetail({ name, lastName, photo, email, username, birthDate }) {
   return (
-    <div className="coach-detail">
-      <div className="coach-detail-header">
-        <h2>{`${name} ${lastName}`}</h2>
-        <img src={photo} alt={`${name} ${lastName}`} />
-      </div>
-      <div className="coach-detail-info">
-        <p><strong>Email:</strong> {email}</p>
-        <p><strong>Username:</strong> {username}</p>
-        <p><strong>Birth Date:</strong> {new Date(birthDate).toLocaleDateString()}</p>
-      </div>
+    <>
+
+    <div className="super-container-user">
+        <div className="profile-container">
+          <div className="coach-detail-info">
+            <h2>Perfil del Coach</h2>
+            <div className="badge role-color text-wrap">{username}</div>
+            <p>Nombre:&nbsp;{name}</p>
+            <p>Apellidos:&nbsp;{lastName}</p>
+            <p>Email:&nbsp;{email}</p>
+          </div>
+          <div className="coach-detail-photo">
+            <img src={photo} />
+          </div>
+        </div>
     </div>
+
+    </>
+
   );
 }
 

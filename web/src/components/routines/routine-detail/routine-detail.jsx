@@ -91,7 +91,7 @@ function RoutineDetail({
               </tbody>
             </table>
             <div className="container-button">
-              <button onClick={() => handleCreateSubs(id)} className="sub-button ">Suscríbete</button>
+              <button onClick={() => handleCreateSubs(id)} className="sub-button ">Añadir a mis rutinas</button>
             </div>
           </div>
         </div>

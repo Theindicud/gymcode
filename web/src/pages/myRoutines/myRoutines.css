@@ -28,3 +28,13 @@
   z-index: -1; 
 }
 
+.routine-detail-container {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: rgba(249, 249, 249, 0.8); 
+  border-color: #0578c5;
+  border-width: 5px;
+  width: 750px;
+  height: auto;
+  z-index: 1; 
+}

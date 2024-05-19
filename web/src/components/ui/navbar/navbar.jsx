@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import { Link, NavLink } from "react-router-dom";
-import AuthContext from "../../../contexts/auth.context"
+import { Link } from "react-router-dom";
+import AuthContext from "../../../contexts/auth.context";
 
 import "./navbar.css";
 
-const renderNavLinkActive = ({ isActive }) => isActive ? 'nav-link active' : 'nav-link'
-
+const renderNavLinkActive = ({ isActive }) =>
+  isActive ? "nav-link active" : "nav-link";
 
 function Navbar() {
   const { user, doLogout } = useContext(AuthContext);
@@ -49,51 +49,45 @@ function Navbar() {
               </li>
               <li className="nav-item">
                 {user ? (
-                  <a className="nav-link" href="/profile">
+                  <a className="nav-link" href="/profile" style={{fontWeight: 'bold'}}>
                     Perfil - {user.name}
                   </a>
                 ) : (
-                  <a className="nav-link" href="/login">
+                  <a className="nav-link" href="/login" style={{fontWeight: 'bold'}}>
                     Iniciar sesión
                   </a>
-
                 )}
               </li>
 
-
               <li className="nav-item">
-                {user ? (
-                    null
-                ) : (
-                  <a className="nav-link" href="/Register">
-                  Registrate
+                {user ? null : (
+                  <a className="nav-link" href="/Register" style={{fontWeight: 'bold'}}>
+                    Registrate
                   </a>
                 )}
               </li>
 
-
               <li className="nav-item">
                 {user ? (
-                  <a className="nav-link" href="/myroutines">
+                  <a className="nav-link" href="/myroutines" style={{fontWeight: 'bold'}}>
                     Mis rutinas
                   </a>
-                ) : (
-                  <a className="nav-link" href="/routines">
-                    Rutinas
-                  </a>
-                )}
+                ) : null}
               </li>
 
-
+              <li className="nav-item">
+                <a className="nav-link" href="/routines" style={{fontWeight: 'bold'}}>
+                  Rutinas
+                </a>
+              </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="/coaches">
+                <a className="nav-link" href="/coaches" style={{fontWeight: 'bold'}}>
                   Coach
                 </a>
               </li>
 
               {user && (
-
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link dropdown-toggle"
@@ -102,6 +96,7 @@ function Navbar() {
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
+                    style={{fontWeight: 'bold'}}
                   >
                     Configuración <i class="fa fa-cog" aria-hidden="true"></i>
                   </a>
@@ -110,27 +105,18 @@ function Navbar() {
                     aria-labelledby="offcanvasNavbarDropdown"
                   >
                     <li>
-                      <a className="dropdown-item" href="/profile">
+                      <a className="dropdown-item" href="/profile" style={{fontWeight: 'bold'}}>
                         Perfil
                       </a>
                     </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Ayuda
-                      </a>
-                    </li>
                     <li className="nav-item">
-                      <a
-                        onClick={doLogout}
-                        className="btn btn-sm btn-danger"
-                      >
+                      <a onClick={doLogout} className="dropdown-item btn btn-sm" style={{fontWeight: 'bold', color: 'red'}}>
                         Cerrar sesión
                       </a>
                     </li>
                   </ul>
                 </li>
               )}
-
             </ul>
           </div>
         </div>
