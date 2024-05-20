@@ -1,5 +1,3 @@
-import "./Card.css";
-
 function Card({ imageSrc, title, text }) {
     return (
         <div className="col">

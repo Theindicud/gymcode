@@ -1,13 +1,17 @@
 .filter-map-list-container-father {
     flex-direction: column;
-    height: 70vh;
+    height: 80vh;
+    outline-width: 7px;
 }
 
 .filter-map-list-head {
     text-align: center;
-    color: #000;
+    color: #fff;
     padding: 15px;
     text-transform: uppercase;
+    background-color: rgb(38, 64, 94);
+
+    
   }
   
   .filter-map-list-title h1 {
@@ -26,6 +30,7 @@
   .filter-map-home {
     width: 600px;
     margin-right: 20px; 
+    
   }
 
   .filter-map-list-container-child {

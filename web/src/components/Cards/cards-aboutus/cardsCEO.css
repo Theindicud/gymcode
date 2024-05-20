@@ -1,7 +1,15 @@
+.row-cols-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+}
+
 .card {
-    border: 1px solid #dee2e6;
+    border: 1px solid #007bff; 
     border-radius: 0.25rem;
-    width: 15rem;
+    max-width: 400px; 
+    background-color: #fff;
+    margin-bottom: 20px; 
 }
 
 .card-img-top {
@@ -15,17 +23,20 @@
 
 .card-body {
     padding: 1.25rem;
+    background-color: #fff; 
+    border: 1px solid #4682b4;
+    border-radius: 0.25rem;
 }
 
 .card-title {
     font-size: 1.25rem;
     font-weight: bold;
     text-align: justify;
-
+    color: #00008b; 
 }
 
 .card-text {
     font-size: 1rem;
-    color: #6c757d;
+    color: #4682b4; 
     text-align: justify;
 }

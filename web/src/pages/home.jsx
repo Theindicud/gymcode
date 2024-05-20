@@ -1,11 +1,13 @@
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { useState } from 'react';
+
 import VideoHomeSection from "../components/videoHomeSection/videoHomeSection";
 import RoutinesListHome from "../components/routines/routines-list-home/routines-list-home";
 import AutocompleteInput from "../components/google/autocomplete/autocomplete-input";
 import Map from "../components/google/map/map";
 import GymList from "../components/gyms/gym-list-home/gym-list-home";
-import { useState } from 'react';
 import CoachesCarousel from "../components/coaches/coaches-carousel/coaches-carousel";
+import CardsHome from "../components/Cards/cards-home/cards-home"
 import "./home.css"
 
 function Home() {
@@ -56,6 +58,7 @@ function Home() {
             </div>
             <RoutinesListHome limit={3} />
             <CoachesCarousel limit={4} className="mb-4" />
+            <CardsHome/>
         </>
     )
 }
