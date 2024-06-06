@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom"; // Importa NavLink
 import AuthContext from "../../../contexts/auth.context";
 
 import "./navbar.css";
@@ -43,48 +43,82 @@ function Navbar() {
           <div className=" offcanvas-body">
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <NavLink
+                  className="nav-link"
+                  activeclassname="active"
+                  to="/"
+                >
                   <i className=" fa fa-home" aria-hidden="true"></i>
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
                 {user ? (
-                  <a className="nav-link" href="/profile" style={{fontWeight: 'bold'}}>
+                  <NavLink
+                    className={renderNavLinkActive}
+                    activeclassname="active"
+                    to="/profile"
+                    style={{ fontWeight: "bold" }}
+                  >
                     Perfil - {user.name}
-                  </a>
+                  </NavLink>
                 ) : (
-                  <a className="nav-link" href="/login" style={{fontWeight: 'bold'}}>
+                  <NavLink
+                    className={renderNavLinkActive}
+                    activeclassname="active"
+                    to="/login"
+                    style={{ fontWeight: "bold" }}
+                  >
                     Iniciar sesión
-                  </a>
+                  </NavLink>
                 )}
               </li>
 
               <li className="nav-item">
                 {user ? null : (
-                  <a className="nav-link" href="/Register" style={{fontWeight: 'bold'}}>
+                  <NavLink
+                    className={renderNavLinkActive}
+                    activeclassname="active"
+                    to="/register"
+                    style={{ fontWeight: "bold" }}
+                  >
                     Registrate
-                  </a>
+                  </NavLink>
                 )}
               </li>
 
               <li className="nav-item">
                 {user ? (
-                  <a className="nav-link" href="/myroutines" style={{fontWeight: 'bold'}}>
+                  <NavLink
+                    className={renderNavLinkActive}
+                    activeclassname="active"
+                    to="/myroutines"
+                    style={{ fontWeight: "bold" }}
+                  >
                     Mis rutinas
-                  </a>
+                  </NavLink>
                 ) : null}
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="/routines" style={{fontWeight: 'bold'}}>
+                <NavLink
+                  className={renderNavLinkActive}
+                  activeclassname="active"
+                  to="/routines"
+                  style={{ fontWeight: "bold" }}
+                >
                   Rutinas
-                </a>
+                </NavLink>
               </li>
 
               <li className="nav-item">
-                <a className="nav-link" href="/coaches" style={{fontWeight: 'bold'}}>
+                <NavLink
+                  className={renderNavLinkActive}
+                  activeclassname="active"
+                  to="/coaches"
+                  style={{ fontWeight: "bold" }}
+                >
                   Coach
-                </a>
+                </NavLink>
               </li>
 
               {user && (
@@ -96,21 +130,30 @@ function Navbar() {
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
-                    style={{fontWeight: 'bold'}}
+                    style={{ fontWeight: "bold" }}
                   >
-                    Configuración <i class="fa fa-cog" aria-hidden="true"></i>
+                    Configuración{" "}
+                    <i className="fa fa-cog" aria-hidden="true"></i>
                   </a>
                   <ul
                     className="dropdown-menu"
                     aria-labelledby="offcanvasNavbarDropdown"
                   >
                     <li>
-                      <a className="dropdown-item" href="/profile" style={{fontWeight: 'bold'}}>
+                      <NavLink
+                        className="dropdown-item"
+                        to="/profile"
+                        style={{ fontWeight: "bold" }}
+                      >
                         Perfil
-                      </a>
+                      </NavLink>
                     </li>
                     <li className="nav-item">
-                      <a onClick={doLogout} className="dropdown-item btn btn-sm" style={{fontWeight: 'bold', color: 'red'}}>
+                      <a
+                        onClick={doLogout}
+                        className="dropdown-item btn btn-sm"
+                        style={{ fontWeight: "bold", color: "red" }}
+                      >
                         Cerrar sesión
                       </a>
                     </li>
@@ -126,3 +169,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

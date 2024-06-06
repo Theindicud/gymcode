@@ -22,7 +22,7 @@ router.get("/coach/:id", users.getCoachById);
 
 //ROUTINES CRUD
 
-router.post("/routines", auth.checkAuth, auth.checkRole("admin", "coach"), routines.create);
+router.post("/createroutine", auth.checkAuth, auth.checkRole("admin", "coach"), routines.create);
 router.get("/routines", routines.list);
 router.get("/routines/:id", auth.checkAuth, routines.detail);
 router.delete("/routines/:id", auth.checkAuth, auth.checkRole("admin", "coach"), routines.delete);
@@ -41,6 +41,9 @@ router.delete("/exercises/:id", auth.checkAuth, auth.checkRole("admin", "coach")
 
 router.post("/subscriptions", auth.checkAuth, auth.checkRole("admin", "coach", "pupil"), subscriptions.follow);
 router.get("/myroutines", auth.checkAuth, auth.checkRole("admin", "coach", "pupil"), subscriptions.showMySubscriptions);
+router.delete('/subscriptions/:routineId', auth.checkAuth, auth.checkRole("admin", "coach", "pupil"), subscriptions.unfollow);
+router.get('/subscriptions/check/:routineId', auth.checkAuth, auth.checkRole("admin", "coach", "pupil"), subscriptions.checkSubscription);
+
 
 //GYMS CRUD
 

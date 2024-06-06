@@ -1,6 +1,6 @@
 import ExerciseItem from "../exercise-item/exercise-item";
 import { useEffect, useState } from "react";
-import { getExercises } from "../../../services/api.service";
+import { getExercise } from "../../../services/api.service";
 import { get } from "react-hook-form";
 import { Link } from "react-router-dom";
 

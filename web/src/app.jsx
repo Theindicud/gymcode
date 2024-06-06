@@ -12,6 +12,7 @@ import Profile from "./pages/user/profile.jsx";
 
 import Routines from "./pages/routines/routinesList.jsx";
 import RoutineDetail from "./pages/routines/routineSingle.jsx";
+import CreateRoutineForm from "./pages/routines/routineCreate.jsx";
 
 import MyRoutines from "./pages/myRoutines/myRoutines.jsx";
 
@@ -39,6 +40,7 @@ function App() {
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/routines" element={<Routines />} />
             <Route path="/routines/:id" element={<RoutineDetail />} />
+            <Route path="/createroutine" element={<CreateRoutineForm/>} />
             <Route path="/exercises" element={<Exercises />} />
             <Route path="/exercises/:id" element={<ExerciseDetail />} />
             <Route path="/coaches" element={<CoachesList />} />

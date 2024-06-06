@@ -33,7 +33,7 @@ function Login() {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="mb-3">
                         <label htmlFor="email" className="form-label">
-                            <i class="fa fa-envelope" aria-hidden="true"></i> Correo electrónico
+                            <i className="fa fa-envelope" aria-hidden="true"></i> Correo electrónico
                         </label>
                         <input
                             required
@@ -46,7 +46,7 @@ function Login() {
 
                     <div className="mb-3">
                         <label htmlFor="password" className="form-label">
-                            <i class="fa fa-key" aria-hidden="true"></i>  Contraseña
+                            <i className="fa fa-key" aria-hidden="true"></i>  Contraseña
                         </label>
                         <input
                             required

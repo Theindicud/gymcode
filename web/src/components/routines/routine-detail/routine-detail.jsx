@@ -1,8 +1,7 @@
 import "./routine-detail.css";
 import { Link, useNavigate } from "react-router-dom";
-import { getRoutines } from "../../../services/api.service";
-import { useState } from 'react'
-import { createSubscription } from "../../../services/api.service";
+import { getRoutines, createSubscription, removeSubscription, checkSubscription } from "../../../services/api.service";
+import { useState, useEffect } from 'react';
 
 function RoutineDetail({
   name,
@@ -14,10 +13,23 @@ function RoutineDetail({
   id,
   owner,
 }) {
-
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false); // Estado para manejar la suscripción
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchSubscriptionStatus = async () => {
+      try {
+        const response = await checkSubscription(id);
+        setIsSubscribed(response.data.isSubscribed);
+      } catch (error) {
+        console.error("Error checking subscription status:", error);
+      }
+    };
+
+    fetchSubscriptionStatus();
+  }, [id]);
 
   const handleCreateSubs = async () => {
     setLoading(true);
@@ -26,6 +38,7 @@ function RoutineDetail({
     try {
       await createSubscription(id);
       setMessage('Suscripción exitosa');
+      setIsSubscribed(true);
       navigate("/myroutines");
     } catch (error) {
       setMessage(`Fallo en la suscripción: ${error.message}`);
@@ -34,6 +47,21 @@ function RoutineDetail({
     }
   };
 
+  const handleRemoveSubs = async () => {
+    setLoading(true);
+    setMessage('');
+
+    try {
+      await removeSubscription(id);
+      setMessage('Desuscripción exitosa');
+      setIsSubscribed(false);
+      navigate("/myroutines");
+    } catch (error) {
+      setMessage(`Fallo en la desuscripción: ${error.message}`);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <>
@@ -52,7 +80,7 @@ function RoutineDetail({
                 <span>{difficulty}</span>
               </p>
               <p>
-                <strong>Description: </strong>
+                <strong>Tipo de rutina: </strong>
                 <span>{routineType}</span>
               </p>
             </div>
@@ -91,15 +119,23 @@ function RoutineDetail({
               </tbody>
             </table>
             <div className="container-button">
-              <button onClick={() => handleCreateSubs(id)} className="sub-button ">Añadir a mis rutinas</button>
+              {isSubscribed ? (
+                <button onClick={handleRemoveSubs} className="sub-button">
+                  Desuscribirse de la rutina
+                </button>
+              ) : (
+                <button onClick={handleCreateSubs} className="sub-button">
+                  Añadir a mis rutinas
+                </button>
+              )}
             </div>
+            {loading && <p>Loading...</p>}
+            {message && <p>{message}</p>}
           </div>
         </div>
       </section>
     </>
   );
-
 }
-
 
 export default RoutineDetail;

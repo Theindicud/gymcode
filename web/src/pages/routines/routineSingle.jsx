@@ -36,9 +36,9 @@ function Routine() {
 
             <div className='container-routines'>
             {loading ? (
-               <div class="spinner-border text-primary" role="status">
-               <span class="sr-only">Cargando...</span>
-             </div>
+                <div className="spinner-border text-primary" role="status">
+                    <span className="sr-only">Cargando...</span>
+                </div>
             ) : (
                 <RoutineDetail {...routine} />
             )}

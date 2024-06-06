@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getRoutines } from "../../../services/api.service";
 import RoutineCard from "../routine-card/routine-card";
 import "./routines-list.css";
+import { Link } from "react-router-dom";
 
 function RoutinesList({
   equipmentNecessary,
@@ -125,6 +126,9 @@ function RoutinesList({
             </div>
           </div>
         </div>
+        
+        <Link to="/createroutine" className="btn btn-create-routine"><strong>Crear Nueva Rutina</strong></Link>
+
       </div>
 
         <div className="routines-list-container">

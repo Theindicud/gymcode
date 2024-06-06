@@ -27,9 +27,28 @@ export function createUser(data) {
     return http.post("/users", data)
 }
 
+export const createRoutine = async (routineData) => {
+    try {
+        const response = await http.post('/api/routines', routineData);
+        return response;
+    } catch (error) {
+        console.error('Error creating routine:', error);
+        throw error;
+    }
+};
+
 export function createSubscription(routine) {
     return http.post("/subscriptions", { routine })
 }
+
+export function removeSubscription(routineId) {
+    return http.delete(`/subscriptions/${routineId}`);
+}
+
+export function checkSubscription(routineId) {
+    return http.get(`/subscriptions/check/${routineId}`);
+}
+
 
 export function login(data) {
     return http.post("/login", data).then((response) => {
@@ -62,13 +81,20 @@ export function getRoutine(id) {
     return http.get(`/routines/${id}`);
 }
 
-export function getExercises(params) {
-    return http.get("/exercises", { params })
+export function getExercise(params) {
+    return http.get("/exercises", { params });
 }
 
-export function getExercise(id) {
-    return http.get(`/exercises/${id}`);
-}
+export const createExercise = async (data) => {
+    try {
+        const response = await http.post("/exercises", data);
+        return response;
+    } catch (error) {
+        console.error('Error creating exercise:', error);
+        throw error;
+    }
+};
+
 
 export function myRoutines() {
     return http.get("/myroutines")

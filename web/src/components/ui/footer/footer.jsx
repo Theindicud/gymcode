@@ -28,8 +28,8 @@ function Footer() {
                             </div>
                             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                                 <h6 className="text-uppercase mb-4 font-weight-bold">Contacto</h6>
-                                <p><i class="fa fa-info" aria-hidden="true"></i> info@gymcode.com</p>
-                                <p><i class="fa fa-phone" aria-hidden="true"></i>+34 123 456 789</p>
+                                <p><i className="fa fa-info" aria-hidden="true"></i> info@gymcode.com</p>
+                                <p><i className="fa fa-phone" aria-hidden="true"></i>+34 123 456 789</p>
                             </div>
                         </div>
                     </section>
