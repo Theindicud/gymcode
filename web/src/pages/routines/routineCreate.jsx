@@ -108,7 +108,7 @@ function CreateRoutineForm() {
                 </div>
                 <div className="mb-3">
                     <label htmlFor="routineType" className="form-label">Tipo de rutina:</label>
-                    <select {...register('routineType')} className="form-select">
+                    <select id="routineType" className={`form-select ${errors.routineType ? "is-invalid" : ""}`} {...register('routineType')}>
                         <option value="">Selecciona una opción</option>
                         <option value="Fuerza">Fuerza</option>
                         <option value="Resistencia">Resistencia</option>
@@ -116,6 +116,7 @@ function CreateRoutineForm() {
                         <option value="Flexibilidad">Flexibilidad</option>
                         <option value="Otro">Otro</option>
                     </select>
+                    {errors.routineType && <div className="invalid-feedback">Campo requerido</div>}
                 </div>
                 <div className="mb-3">
                     <input
@@ -168,7 +169,7 @@ function CreateRoutineForm() {
                                 {errors?.newExerciseName && <div className="invalid-feedback">Campo requerido</div>}
                             </div>
                             <div className="mb-3">
-                                <label htmlFor="newExerciseEquipment" className="form-label"><strong>¿Es necesario equipamiento? Sí &nbsp; </strong></label>
+                                <label htmlFor="newExerciseEquipment" className="form-label">¿Es necesario equipamiento?:</label>
                                 <select
                                     id="newExerciseEquipment"
                                     className={`form-select ${errors?.newExerciseEquipment ? "is-invalid" : ""}`}
@@ -192,15 +193,36 @@ function CreateRoutineForm() {
 
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="exercises" className="form-label">Ejercicios Añadidos:</label>
-                    {fields.map((item) => (
+                <label className="form-label">Ejercicios Añadidos:</label>
+                {fields.map((item, index) => (
                         <div key={item.id} className="added-exercise-item">
-                            <span>{item.name} &nbsp; {item.equipment}</span>
+                            <label htmlFor={`exercise-name-${item.id}`} className="form-label">
+                                {item.name}
+                            </label>
+                            <input
+                                type="hidden"
+                                id={`exercise-name-${item.id}`}
+                                defaultValue={item.name}
+                                {...register(`exercises.${index}.name`)}
+                            />
+                            <label htmlFor={`exercise-equipment-${item.id}`} className="form-label">
+                                {item.equipment}
+                            </label>
+                            <input
+                                type="hidden"
+                                id={`exercise-equipment-${item.id}`}
+                                defaultValue={item.equipment}
+                                {...register(`exercises.${index}.equipment`)}
+                            />
+                            &nbsp; <button type="button" className="btn btn-outline-danger btn-sm" onClick={() => remove(index)}>
+                                Eliminar
+                            </button>
                         </div>
                     ))}
                 </div>
+
                 <div className="mb-3 d-flex align-items-center">
-                    <label htmlFor="equipmentNecessary" className="form-check-label me-2 mb-0">¿Es necesario equipamiento?: Sí&nbsp;  </label>
+                    <label htmlFor="equipmentNecessary" className="form-check-label me-2 mb-0">¿Es necesario equipamiento?: Sí&nbsp;</label>
                     <div className="form-check">
                         <input
                             type="checkbox"
@@ -210,7 +232,7 @@ function CreateRoutineForm() {
                         />
                     </div>
                 </div>
-                <button type="submit" className="btn btn-outline-dark ">Crear Rutina</button>
+                <button type="submit" className="btn btn-outline-dark">Crear Rutina</button>
             </form>
         </div>
     );
